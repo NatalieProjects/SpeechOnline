@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://db.onlinewebfonts.com/c/5da49843f66caf14799662bd12aa55a2?family=Dream+Avenue" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bezier-sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+
+    <style>
+
+/*Hamburger*/
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+ .hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #000; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+   * 3DX
+   */
+.hamburger--3dx .hamburger-box {
+  perspective: 80px; }
+
+.hamburger--3dx .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dx.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateY(180deg); }
+  .hamburger--3dx.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--3dx.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg); }
+
+/*
+   * 3DX Reverse
+   */
+.hamburger--3dx-r .hamburger-box {
+  perspective: 80px; }
+
+.hamburger--3dx-r .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .hamburger--3dx-r .hamburger-inner::before, .hamburger--3dx-r .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dx-r.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateY(-180deg); }
+  .hamburger--3dx-r.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--3dx-r.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg); }
+
+/*
+   * 3DY
+   */
+.hamburger--3dy .hamburger-box {
+  perspective: 80px; }
+
+.hamburger--3dy .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dy.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateX(-180deg); }
+  .hamburger--3dy.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--3dy.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg); }
+
+/*
+   * 3DY Reverse
+   */
+.hamburger--3dy-r .hamburger-box {
+  perspective: 80px; }
+
+.hamburger--3dy-r .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .hamburger--3dy-r .hamburger-inner::before, .hamburger--3dy-r .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dy-r.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg); }
+  .hamburger--3dy-r.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--3dy-r.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg); }
+
+/*
+   * 3DXY
+   */
+.hamburger--3dxy .hamburger-box {
+  perspective: 80px; }
+
+.hamburger--3dxy .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .hamburger--3dxy .hamburger-inner::before, .hamburger--3dxy .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dxy.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg); }
+  .hamburger--3dxy.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--3dxy.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg); }
+
+/*
+   * 3DXY Reverse
+   */
+.hamburger--3dxy-r .hamburger-box {
+  perspective: 80px; }
+
+.hamburger--3dxy-r .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .hamburger--3dxy-r .hamburger-inner::before, .hamburger--3dxy-r .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dxy-r.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg); }
+  .hamburger--3dxy-r.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--3dxy-r.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg); }
+
+/*
+   * Arrow
+   */
+.hamburger--arrow.is-active .hamburger-inner::before {
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+
+.hamburger--arrow.is-active .hamburger-inner::after {
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+/*
+   * Arrow Right
+   */
+.hamburger--arrow-r.is-active .hamburger-inner::before {
+  transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+.hamburger--arrow-r.is-active .hamburger-inner::after {
+  transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+
+/*
+   * Arrow Alt
+   */
+.hamburger--arrowalt .hamburger-inner::before {
+  transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.hamburger--arrowalt .hamburger-inner::after {
+  transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.hamburger--arrowalt.is-active .hamburger-inner::before {
+  top: 0;
+  transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
+  transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
+
+.hamburger--arrowalt.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
+  transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
+
+/*
+   * Arrow Alt Right
+   */
+.hamburger--arrowalt-r .hamburger-inner::before {
+  transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.hamburger--arrowalt-r .hamburger-inner::after {
+  transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.hamburger--arrowalt-r.is-active .hamburger-inner::before {
+  top: 0;
+  transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);
+  transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
+
+.hamburger--arrowalt-r.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);
+  transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
+
+/*
+   * Arrow Turn
+   */
+.hamburger--arrowturn.is-active .hamburger-inner {
+  transform: rotate(-180deg); }
+  .hamburger--arrowturn.is-active .hamburger-inner::before {
+    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+  .hamburger--arrowturn.is-active .hamburger-inner::after {
+    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+
+/*
+   * Arrow Turn Right
+   */
+.hamburger--arrowturn-r.is-active .hamburger-inner {
+  transform: rotate(-180deg); }
+  .hamburger--arrowturn-r.is-active .hamburger-inner::before {
+    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-r.is-active .hamburger-inner::after {
+    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+/*
+   * Boring
+   */
+.hamburger--boring .hamburger-inner, .hamburger--boring .hamburger-inner::before, .hamburger--boring .hamburger-inner::after {
+  transition-property: none; }
+
+.hamburger--boring.is-active .hamburger-inner {
+  transform: rotate(45deg); }
+  .hamburger--boring.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0; }
+  .hamburger--boring.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg); }
+
+/*
+   * Collapse
+   */
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--collapse .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
+  .hamburger--collapse .hamburger-inner::before {
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--collapse.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
+  .hamburger--collapse.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*
+   * Collapse Reverse
+   */
+.hamburger--collapse-r .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--collapse-r .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
+  .hamburger--collapse-r .hamburger-inner::before {
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--collapse-r.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--collapse-r.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
+  .hamburger--collapse-r.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*
+   * Elastic
+   */
+.hamburger--elastic .hamburger-inner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .hamburger--elastic .hamburger-inner::before {
+    top: 10px;
+    transition: opacity 0.125s 0.275s ease; }
+  .hamburger--elastic .hamburger-inner::after {
+    top: 20px;
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.hamburger--elastic.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  transition-delay: 0.075s; }
+  .hamburger--elastic.is-active .hamburger-inner::before {
+    transition-delay: 0s;
+    opacity: 0; }
+  .hamburger--elastic.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-270deg);
+    transition-delay: 0.075s; }
+
+/*
+   * Elastic Reverse
+   */
+.hamburger--elastic-r .hamburger-inner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .hamburger--elastic-r .hamburger-inner::before {
+    top: 10px;
+    transition: opacity 0.125s 0.275s ease; }
+  .hamburger--elastic-r .hamburger-inner::after {
+    top: 20px;
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.hamburger--elastic-r.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(-135deg);
+  transition-delay: 0.075s; }
+  .hamburger--elastic-r.is-active .hamburger-inner::before {
+    transition-delay: 0s;
+    opacity: 0; }
+  .hamburger--elastic-r.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(270deg);
+    transition-delay: 0.075s; }
+
+/*
+   * Emphatic
+   */
+.hamburger--emphatic {
+  overflow: hidden; }
+  .hamburger--emphatic .hamburger-inner {
+    transition: background-color 0.125s 0.175s ease-in; }
+    .hamburger--emphatic .hamburger-inner::before {
+      left: 0;
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }
+    .hamburger--emphatic .hamburger-inner::after {
+      top: 10px;
+      right: 0;
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }
+  .hamburger--emphatic.is-active .hamburger-inner {
+    transition-delay: 0s;
+    transition-timing-function: ease-out;
+    background-color: transparent !important; }
+    .hamburger--emphatic.is-active .hamburger-inner::before {
+      left: -80px;
+      top: -80px;
+      transform: translate3d(80px, 80px, 0) rotate(45deg);
+      transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .hamburger--emphatic.is-active .hamburger-inner::after {
+      right: -80px;
+      top: -80px;
+      transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+      transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+/*
+   * Emphatic Reverse
+   */
+.hamburger--emphatic-r {
+  overflow: hidden; }
+  .hamburger--emphatic-r .hamburger-inner {
+    transition: background-color 0.125s 0.175s ease-in; }
+    .hamburger--emphatic-r .hamburger-inner::before {
+      left: 0;
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }
+    .hamburger--emphatic-r .hamburger-inner::after {
+      top: 10px;
+      right: 0;
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }
+  .hamburger--emphatic-r.is-active .hamburger-inner {
+    transition-delay: 0s;
+    transition-timing-function: ease-out;
+    background-color: transparent !important; }
+    .hamburger--emphatic-r.is-active .hamburger-inner::before {
+      left: -80px;
+      top: 80px;
+      transform: translate3d(80px, -80px, 0) rotate(-45deg);
+      transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .hamburger--emphatic-r.is-active .hamburger-inner::after {
+      right: -80px;
+      top: 80px;
+      transform: translate3d(-80px, -80px, 0) rotate(45deg);
+      transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+/*
+   * Minus
+   */
+.hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+
+.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
+  opacity: 0;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+
+.hamburger--minus.is-active .hamburger-inner::before {
+  top: 0; }
+
+.hamburger--minus.is-active .hamburger-inner::after {
+  bottom: 0; }
+
+/*
+   * Slider
+   */
+.hamburger--slider .hamburger-inner {
+  top: 2px; }
+  .hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; }
+  .hamburger--slider .hamburger-inner::after {
+    top: 20px; }
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0; }
+  .hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg); }
+
+/*
+   * Slider Reverse
+   */
+.hamburger--slider-r .hamburger-inner {
+  top: 2px; }
+  .hamburger--slider-r .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; }
+  .hamburger--slider-r .hamburger-inner::after {
+    top: 20px; }
+
+.hamburger--slider-r.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(-45deg); }
+  .hamburger--slider-r.is-active .hamburger-inner::before {
+    transform: rotate(45deg) translate3d(5.71429px, -6px, 0);
+    opacity: 0; }
+  .hamburger--slider-r.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(90deg); }
+
+/*
+   * Spin
+   */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--spin .hamburger-inner::before {
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+  .hamburger--spin .hamburger-inner::after {
+    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--spin.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+  .hamburger--spin.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*
+   * Spin Reverse
+   */
+.hamburger--spin-r .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--spin-r .hamburger-inner::before {
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+  .hamburger--spin-r .hamburger-inner::after {
+    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spin-r.is-active .hamburger-inner {
+  transform: rotate(-225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--spin-r.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+  .hamburger--spin-r.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(90deg);
+    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*
+   * Spring
+   */
+.hamburger--spring .hamburger-inner {
+  top: 2px;
+  transition: background-color 0s 0.13s linear; }
+  .hamburger--spring .hamburger-inner::before {
+    top: 10px;
+    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--spring .hamburger-inner::after {
+    top: 20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spring.is-active .hamburger-inner {
+  transition-delay: 0.22s;
+  background-color: transparent !important; }
+  .hamburger--spring.is-active .hamburger-inner::before {
+    top: 0;
+    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--spring.is-active .hamburger-inner::after {
+    top: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(-45deg); }
+
+/*
+   * Spring Reverse
+   */
+.hamburger--spring-r .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--spring-r .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear; }
+  .hamburger--spring-r .hamburger-inner::before {
+    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spring-r.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--spring-r.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.22s linear; }
+  .hamburger--spring-r.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(90deg);
+    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*
+   * Stand
+   */
+.hamburger--stand .hamburger-inner {
+  transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }
+  .hamburger--stand .hamburger-inner::before {
+    transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--stand .hamburger-inner::after {
+    transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--stand.is-active .hamburger-inner {
+  transform: rotate(90deg);
+  background-color: transparent !important;
+  transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }
+  .hamburger--stand.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--stand.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(45deg);
+    transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*
+   * Stand Reverse
+   */
+.hamburger--stand-r .hamburger-inner {
+  transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }
+  .hamburger--stand-r .hamburger-inner::before {
+    transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--stand-r .hamburger-inner::after {
+    transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--stand-r.is-active .hamburger-inner {
+  transform: rotate(-90deg);
+  background-color: transparent !important;
+  transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }
+  .hamburger--stand-r.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--stand-r.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(45deg);
+    transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*
+   * Squeeze
+   */
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--squeeze .hamburger-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+  .hamburger--squeeze .hamburger-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--squeeze.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+  .hamburger--squeeze.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*
+   * Vortex
+   */
+.hamburger--vortex .hamburger-inner {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+  .hamburger--vortex .hamburger-inner::before, .hamburger--vortex .hamburger-inner::after {
+    transition-duration: 0s;
+    transition-delay: 0.1s;
+    transition-timing-function: linear; }
+  .hamburger--vortex .hamburger-inner::before {
+    transition-property: top, opacity; }
+  .hamburger--vortex .hamburger-inner::after {
+    transition-property: bottom, transform; }
+
+.hamburger--vortex.is-active .hamburger-inner {
+  transform: rotate(765deg);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+  .hamburger--vortex.is-active .hamburger-inner::before, .hamburger--vortex.is-active .hamburger-inner::after {
+    transition-delay: 0s; }
+  .hamburger--vortex.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0; }
+  .hamburger--vortex.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(90deg); }
+
+/*
+   * Vortex Reverse
+   */
+.hamburger--vortex-r .hamburger-inner {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+  .hamburger--vortex-r .hamburger-inner::before, .hamburger--vortex-r .hamburger-inner::after {
+    transition-duration: 0s;
+    transition-delay: 0.1s;
+    transition-timing-function: linear; }
+  .hamburger--vortex-r .hamburger-inner::before {
+    transition-property: top, opacity; }
+  .hamburger--vortex-r .hamburger-inner::after {
+    transition-property: bottom, transform; }
+
+.hamburger--vortex-r.is-active .hamburger-inner {
+  transform: rotate(-765deg);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+  .hamburger--vortex-r.is-active .hamburger-inner::before, .hamburger--vortex-r.is-active .hamburger-inner::after {
+    transition-delay: 0s; }
+  .hamburger--vortex-r.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0; }
+  .hamburger--vortex-r.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg); }
+
+/*Site*/ 
+
+body {
+    overflow-X: hidden;
+    margin: 0;
+    top:0;
+}
+
+.h1, .h2, .h3, .h4, .h5 {
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+
+.site-header {
+    background-image: url('https://static.wixstatic.com/media/5b717b_8eedcefa48ce4c059823df6ad1edda76~mv2.jpg/v1/fill/w_640,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b717b_8eedcefa48ce4c059823df6ad1edda76~mv2.jpg');
+    height: 100vh;
+    overflow: hidden;
+    background-color: #3d3630;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.nav {
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 100%;
+}
+.nav li {
+    padding: 10px 30px;
+    float: none;
+    text-align: right;
+}
+
+.nav li:nth-child(1){
+
+    margin-top: 20px;
+}
+.nav li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav li a {
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 16pt;
+}
+
+.site-menu-composition {
+    position: absolute;
+    height: 100vh;
+    width: calc(100% - 76px);
+    left: calc(-100%);
+    transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 99;
+    /*width: 0%;*/
+}
+
+.site-menu-composition.active {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    left: 0px;
+    z-index: 99;
+}
+
+.site-menu {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    /*width: 320px;*/
+    width: calc(100%);
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.8);
+}
+
+
+
+/*Styles of open-menu element*/
+
+.hamburger {
+    position: relative;
+    float: right;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+}
+
+.hamburger-box {
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 34px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.header-content {
+    /*position: relative;*/
+    height: 100%;
+    color: beige;
+}
+
+.header-flex {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+}
+
+.flex-center {
+    margin: auto;
+    text-align: center;
+}
+
+.header-composition p {
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: 'Bezier Sans', sans-serif;
+    letter-spacing: 3px;
+}
+
+
+.header-composition .h1 { 
+        font-size: 66pt;   
+        letter-spacing: 4px;  
+        font-family: "Dream Avenue"; 
+        white-space: nowrap;                                
+}
+
+
+.header-social {
+    position: absolute;
+    display: flex;
+    right: 0;
+    height: 100vh;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    top: 0;
+    padding: 0 12px;
+}
+
+
+.soc {
+    margin: auto;
+}
+.soc ul,li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.soc a {
+    display: block;
+    color:rgba(255, 255, 255, 0.4); 
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 52px;
+    width: 52px;
+    text-align: center;
+    margin:20px 0;
+    line-height: 52px;
+    border-radius: 50%;
+    transition: background-color 0.25 ease;
+    z-index: 100;
+}
+
+.soc a:hover {
+    /*background-color: rgba(0, 0, 0, 0.4);*/
+    color:rgba(255, 255, 255, 0.8); 
+}
+
+
+/*Page 2 - About me*/
+
+.about-school {
+    padding: 60px 40px;
+    background-image: url('https://assets.isu.pub/document-structure/230612045852-f64dc2b8fadd979ff1cc81d90e620cb1/v1/4f724edc55c55c0ae7990ad7c70d064c.jpeg');
+    height: 100vh;
+    background-color: #3d3630;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(61, 54, 48);
+}
+.about-school-composition {
+    background-color: rgba(222, 184, 135, 0.6); 
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+}
+
+.about-school-composition p {
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: 'Bezier Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.about-school-composition .h2 {
+    font-size: 20pt;
+    font-family: 'Bezier Sans', sans-serif;
+    letter-spacing: 2px;                 
+}
+
+/*Page 3*/
+
+
+.about-me {
+    background-color: rgb(241, 238, 235);
+}
+
+
+.about-me-image {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.about-me-content {
+    padding: 20px 0px;
+    font-size: 10pt;
+}
+
+.about-me-content h4 {
+    font-weight: 700;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 12pt;
+    font-family: 'Bezier Sans', sans-serif;
+    letter-spacing: 2px; 
+}
+
+.about-me-content p {
+    font-size: 8pt;
+    text-transform: uppercase;
+    font-family: 'Bezier Sans', sans-serif;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.about-me-content .default-p {
+    text-transform: uppercase;
+    font-family: 'Bezier Sans', sans-serif;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+.about-me-content strong {
+    text-transform: uppercase;
+    font-family: 'Bezier Sans', sans-serif;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.about-me-content .content-p-italic {
+    text-transform: uppercase;
+    font-family: 'Bezier Sans', sans-serif;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+
+/*Product page*/
+
+
+.service-page {
+    height: 100vh;
+    background-color: rgb(214, 207, 200);
+}
+
+.about-service {
+    height: 40%;
+}
+
+.about-service-title {
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    padding-left: 40px;
+}
+.about-service .h1 {
+    font-size: 50pt;   
+    letter-spacing: 4px;  
+    font-family: "Dream Avenue"; 
+    white-space: wrap;
+    line-height: 1.0; 
+}
+
+.about-service p {
+    padding: 20px;
+    text-align: right;
+    font-size: 10pt;   
+    letter-spacing: 2px;  
+    font-family: "Bezier Sans";  
+    white-space: wrap;
+    line-height: 1.2; 
+}
+
+.service-items {
+    height: 60%;
+    width: 100%;
+    background-color: rgb(241, 238, 235);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    padding: 0 20px;
+
+}
+
+.service-card {
+    height: 250px;
+    width: 250px;
+    background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/509b99bcedbb9d18211aff40a5631dd4.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-card-2 {
+  /*background-image: url('https://images.squarespace-cdn.com/content/v1/645349357d5a960e6edc1be9/753bab0f-234c-4e36-a80a-b57db08f7cda/13.png?format=1500w');*/
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlpzxWBQuVs9BytCNsRMLdECbVDBd2UF7T0k7Gf0wJwDSrjlCX6knSSSzHa-OjgpymK6s&usqp=CAU');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 250px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.service-card-3 {
+  background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/13bf58421d3effb1a8ac42394bdcaa41.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+}
+
+.service-card .h4 {
+    font-size: 14pt;
+    color: black;
+    white-space: wrap;
+}
+
+/*Service 1*/
+
+.service-1-top-composition-image {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5f1f0f77dc5b234ca15ef3f9/1650561901392-40S1CR22A47CPB1NX18C/jewelsfromthenile.jpg?format=500w');
+    /*background-image: url('https://abbaandoba.com/cdn/shop/articles/Brown_Minimalist_Casual_Fashion_Collection_Presentation_2.png?v=1687154898');*/
+    /*background-image: url('./images/5-top.png');*/
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.service-1-top-composition-content h2 {
+    position: relative;
+    margin-top: 60px;
+    text-align: right;
+    font-family: 'Bezier Sans', sans-serif;
+}
+
+.service-1-top-composition-content .line {
+    display: block;
+    margin-right: -25px;
+    float: right;
+    margin-top: -20px;
+    background-color:rgba(0, 0, 0, 0.2);
+    height: 1px;
+    width: 50%;
+}
+
+.service-1-page {
+    height: 100vh;
+    background-color: rgb(214, 207, 200);
+}
+
+.service-1-page p {
+    margin-bottom: 0px;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 10pt;
+}
+.service-1-bottom-composition {
+    margin-top: 20px;
+}
+
+.service-1-bottom-image {
+    background-image: url('https://kseniamirella.com/cdn/shop/files/4_be8fa506-22ba-4535-bdb4-b199bea41874_2048x2048.png?v=1710257153');
+    /*background-image: url('./images/5-top.png');*/
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.accent-p {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 12pt;
+  letter-spacing: 1px;
+}
+
+.service-1-page {
+  height: 100vh;
+  background-color: rgb(214, 207, 200);
+
+}
+
+/*Service 2*/
+
+.service-2-page {
+  height: 100vh;
+
+}
+.service-2-page p {
+  margin: 0;
+  font-family: 'Bezier Sans', sans-serif;
+  font-size: 9.5pt;
+}
+
+.service-2-page h2 {
+  position: relative;
+  margin-top: 20px;
+  text-align: left;
+  font-family: 'Bezier Sans', sans-serif;
+}
+
+.service-2-top-composition-image {
+  background-image: url('./images/6-top.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60vh;
+  
+}
+.service-2-top-composition-content p {
+  /*margin: 0;*/
+}
+
+/*Service 3 page*/
+.service-3-page {
+  height: 100vh;
+  background-color: rgb(241, 238, 235);
+}
+
+
+.service-3-top-composition-image {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5f1f0f77dc5b234ca15ef3f9/1650561901392-40S1CR22A47CPB1NX18C/jewelsfromthenile.jpg?format=500w');
+    /*background-image: url('./images/5-top.png');*/
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.service-3-top-composition-content h2 {
+    position: relative;
+    margin-top: 50px;
+    text-align: right;
+    font-family: 'Bezier Sans', sans-serif;
+}
+
+.service-3-top-composition-content .line {
+    display: block;
+    margin-right: -25px;
+    float: right;
+    margin-top: -20px;
+    background-color:rgba(0, 0, 0, 0.2);
+    height: 1px;
+    width: 50%;
+}
+
+
+.service-3-page p {
+    margin-bottom: 0px;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 8pt;
+}
+.service-3-bottom-composition {
+    margin-top: 20px;
+}
+
+.service-3-bottom-image {
+    /*background-image: url('https://images.squarespace-cdn.com/content/v1/65d6b068172ddc300b103504/637bb46c-5732-4f02-a43c-aa73e7690462/Screenshot+2024-02-20+at+7.16.58%E2%80%AFPM.png');*/
+    background-image: url('https://btrkenya.co.ke/images/blogs/1680244928-0.jpeg');
+    /*background-image: url('./images/5-top.png');*/
+    display: flex;
+    width: 100%;
+    height: 34vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*Question page*/
+
+.questions-composition {
+    background-color: rgba(222, 184, 135, 0.6); 
+    padding: 20px;
+    height: 100%;
+    /*
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    */
+    text-align: center;
+    color: #000;
+}
+
+.questions-composition p {
+  text-transform: uppercase;
+    margin-top: 20px;
+    font-family: 'Bezier Sans', sans-serif;
+    letter-spacing: 1px;
+  font-size: 10pt;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.questions-composition .summary-p {
+  text-transform: uppercase;
+    margin-top: 20px;
+    font-family: 'Bezier Sans', sans-serif;
+    letter-spacing: 1px;
+  font-size: 8pt;
+  padding: 0;
+  margin: 0;
+}
+
+details > summary::marker {
+  display: none;
+  content: '';
+}
+
+details {
+  border: 1px solid #000;
+  min-height: 40px;
+}
+
+.questions {
+    padding: 20px 30px;
+    background-image: url('./images/2-about-school-background.png');
+    height: 100vh;
+    background-color: #3d3630;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(61, 54, 48);
+}
+       
+.questions h2 {
+    font-size: 40pt;   
+    letter-spacing: 4px;  
+    font-family: "Dream Avenue";
+    white-space: nowrap; 
+}
+
+
+
+
+
+
+/*
+@font-face {
+    font-family: "BadRussianRegular";  
+    src: url("./fonts/BadRussian-Regular.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "DreamAvenueRegular";  
+    src: url("./fonts/DreamAvenue-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+}
+*/
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+    .header-composition .h1 {
+        font-size: 46pt;
+        margin-bottom: 30px;
+        font-family: "Dream Avenue";
+    }
+    .header-composition p {
+        margin-top: 20px;
+        font-size: 14pt;
+    }
+    .header-social {
+        border-left: none;
+    }
+    .soc a {
+        display: block;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 42px;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 84px;
+        width: 84px;
+        text-align: center;
+        margin: 60px 0;
+        line-height: 84px;
+        border-radius: 50%;
+        transition: background-color 0.25 ease;
+    }
+
+    .about-me-content p {
+        font-size: 10pt;
+        text-transform: uppercase;
+        font-family: 'Bezier Sans', sans-serif;
+        margin-top: 10px;
+        letter-spacing: 2px;
+    }
+
+    .about-school-composition p {
+        margin-top: 40px;
+    }
+
+    .about-school {
+      padding: 40px 20px;
+    }
+
+    .about-school-composition {
+      padding: 5px;
+    }
+
+  
+
+    /*Speech product*/
+    
+
+.service-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0 5px;
+}
+
+.service-card {
+    height: 100px;
+    width: 100px;
+    background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/509b99bcedbb9d18211aff40a5631dd4.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-card-2 {
+  /*background-image: url('https://images.squarespace-cdn.com/content/v1/645349357d5a960e6edc1be9/753bab0f-234c-4e36-a80a-b57db08f7cda/13.png?format=1500w');*/
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlpzxWBQuVs9BytCNsRMLdECbVDBd2UF7T0k7Gf0wJwDSrjlCX6knSSSzHa-OjgpymK6s&usqp=CAU');
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.service-card-3 {
+  background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/13bf58421d3effb1a8ac42394bdcaa41.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+}
+.service-card .h4 {
+    font-size: 7pt;
+    color: black;
+    white-space: wrap;
+}
+.service-card-2 .h4 {
+    font-size: 7pt;
+    color: #fff;
+    white-space: wrap;
+}
+.service-card-3 .h4 {
+    font-size: 7pt;
+    color: #000;
+    white-space: wrap;
+}
+
+
+
+/*Service page*/
+
+.service-page {
+  background-color:   rgb(241,238,235);
+}
+
+.about-service {
+    height: 70vh;
+    background-color:   rgb(214,207,200);
+}
+
+.about-service-title {
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    padding: 20px 40px 10px 40px;
+    text-align: center;
+    justify-content: center;
+}
+.about-service .h1 {
+    margin: 10px 0px;
+    font-size: 26pt;   
+    letter-spacing: 0px; 
+    margin-bottom: 4px; 
+    font-family: "Dream Avenue";  
+    white-space: nowrap;
+}
+
+.about-service p {
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 12pt;   
+    letter-spacing: 2px;  
+    font-family: "Bezier Sans";  
+    white-space: wrap;
+    line-height: 1.2; 
+}
+
+.service-items {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*Service 1 page*/
+.service-1-page p {
+    margin-bottom: 0px;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 9pt;
+}
+.service-1-bottom-image {
+  height: 45vh;
+}
+.service-1-top-composition-content .line {
+    display: block;
+    margin-right: -25px;
+    float: right;
+    margin-top: -10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 1px;
+    width: 50%;
+}
+
+.service-1-top-composition-content h2 {
+    position: relative;
+    margin-top: 20px;
+    text-align: right;
+    font-family: 'Bezier Sans', sans-serif;
+    white-space: nowrap;
+    font-size: 16pt;
+    margin-bottom: 4;
+}
+.service-1-bottom-composition {
+    margin-top: 4px;
+}
+/*Service 2 page*/
+.service-2-top-composition {
+  margin-bottom: 4px;
+}
+.service-2-page h2 {
+    position: relative;
+    margin: 5px 0 5px 0;
+    text-align: left;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 15pt;
+}
+.service-2-top-composition-image {
+  background-image: url('https://cdn.mindyourstyle.gr/wp-content/uploads/2024/04/kontomaniko-poukamiso-poplina-240923.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 55vh;
+  
+}
+.service-2-page p {
+    margin: 0;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 8pt;
+    line-height: 1.25;
+}
+/*Service page 3*/
+.service-3-bottom-image {
+    background-image: url('https://btrkenya.co.ke/images/blogs/1680244928-0.jpeg');
+    /*background-image: url('./images/5-top.png');*/
+    display: flex;
+    width: 100%;
+    height: 45vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.service-3-page p {
+    margin-bottom: 0px;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 7pt;
+    line-height: 1.3;
+}
+
+.service-3-top-composition-image {
+    background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/13bf58421d3effb1a8ac42394bdcaa41.jpeg');
+    /* background-image: url('./images/5-top.png'); */
+    display: flex;
+    width: 100%;
+    height: 45vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.service-3-top-composition-content h2 {
+  position: relative;
+    margin-top: 20px;
+    text-align: right;
+    font-family: 'Bezier Sans', sans-serif;
+    white-space: nowrap;
+    font-size: 14pt;
+    margin-bottom: 4px;
+}
+.service-3-top-composition-content .line {
+    display: block;
+    margin-right: -25px;
+    float: right;
+    margin-top: -10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 1px;
+    width: 50%;
+}
+.service-3-bottom-composition {
+  margin-top: 4px;
+}
+
+
+
+
+/*Question page*/
+
+.questions {
+  padding: 10px 15px;
+}
+.questions-composition {
+  padding: 10px 4px;
+}
+.questions h2 {
+    font-size: 26pt;
+    letter-spacing: 0px;
+    font-family: "Dream Avenue";
+    white-space: nowrap;
+}
+
+}
+
+@media (max-width: 576px) {
+
+
+    .header-composition .h1 {
+        font-size: 29pt;
+        margin-bottom: 60px;
+    }
+    .header-composition p {
+        font-size: 11pt;
+    }
+    .header-social {
+        border-left: none;
+    }
+
+}
+
+
+
+
+
+
+     </style>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="site-header">
+
+        
+    <div id="main-menu" class="site-menu-composition">
+        
+        <div class="site-menu">
+            <ul class="nav">
+                <li class="menu-item"><a>Про меня</a></li>
+                <li class="menu-item"><a>Мои услуги</a></li>
+                <li class="menu-item"><a>Записаться на занятие</a></li>
+                <li class="menu-item"><a>Полезные статьи</a></li>
+                <li class="menu-item"><a>Отзывы клиентов</a></li>
+                <li class="menu-item"><a>Частые вопросы</a></li>
+
+            </ul>
+        </div>
+
+        
+    </div>
+    <a id="menu-hamburger" href="#main-menu" class="hamburger hamburger--squeeze">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </a> 
+   
+
+        
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="header-flex">
+
+                                <div class="flex-center">
+
+                                    <div class="header-composition">
+                                    <div class="welcome">
+                                        <h1 class="h1">Speech online</h1>
+                                        <p>Искусство речи без стен и границ</p>
+                                    </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-social">
+                    
+                    <nav class="soc">
+                        <ul>
+                            <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
+        
+    </header>
+
+    <section class="about-school">
+
+        <div class="about-school-composition">
+            <h2 class="h2">Добро пожаловать в мир уверенной речи</h2>
+
+            <p>Это место, где найдется все для поддержки речевого и психологического развития. Профессиональное решение различных проблем, связанных с речью и эмоциональным состоянием.</p>
+
+        </div>
+
+      </section>
+
+    <section class="about-me">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-12 col-md-5 col-lg-5">
+                    <img src="https://4f08810874.cbaul-cdnwnd.com/fa1fe1e2b8b66b2b93fe22d7c427178e/200000012-c69a6c69a8/Imagem%20do%20WhatsApp%20de%202024-05-21%20%C3%A0%28s%29%2020.11.51_731ccafb.jpeg?ph=4f08810874" class="about-me-image">
+                </img>
+                </div>
+                <div class="col col-md-6 col-lg-6">
+                    <div class="about-me-content">
+                        <h4 class="h4">Специалист по речевой коррекции и коммуникации. Логопсихолог.</h2>
+                            
+                            <p>"Грешно думать, что логопедия только для детей. Ведь речь - главный инструмент, он же и оружие."</p>
+                            <strong>Наталья - проводник в мир речевого совершенства</strong>
+                            <p class="default-p">Эксперт в области речевого развития, специалист по психолого-речевой коррекции и коммуникации.</p>
+
+                            <p>Цель - помощь взрослым и подросткам развить уверенность в общении и преодолеть речевые трудности.</p>
+
+                            <p>Где основная задача - не только исправить речевые нарушения, но и развить навыки общения, улучшить социальное взаимодействие и повысить уверенность в себе.</p>
+
+                            <p class="content-p-italic">Мой подход основан на гармоничном сочетании логопедии и психологии, что позволяет создать комфортную атмосферу для обучения и достижения устойчивых результатов.</p>
+
+                            <p class="content-p-italic">Давайте вместе откроем новые горизонты общения!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-page">
+        <div class="about-service">
+
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-12 col-md-5"><div class="about-service-title"><h1 class="h1">Speech product</h1></div></div>
+                    <div class="col-12 col-md-7"><p>С помощью индивидуально подобранных методик работа включает корречцию и развитие речевых навыков, улучшение произношения, артикуляции, дикции, обучение эффективному общению, активному слушанию, умению вести диалог, тренировка навыков публичных выступлений, психологическая поддержка речевых навыков, помощь в преодолении эмоциональных трудностей, психологических барьеров и многое другое</p></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="service-items">
+                    <div class="service-item">
+                        <div class="service-card">
+                            <h4 class="h4">Речевые навыки</h4>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-card-2">
+                            <h4 class="h4">Коммуникативные навыки</h4>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-card-3">
+                            <h4 class="h4">Социальные навыки</h4>
+                        </div>
+                    </div>
+        </div>
+            
+
+    </section>
+
+    <section class="service-1-page">
+
+        <div class="service-1-top-composition">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 col-md-7">
+
+                        <div class="service-1-top-composition-content">
+                            <div class="line"></div>
+                            <h2 class="h2">Речевые навыки</h2>
+                            <p class="accent-p">Работа над артикуляцией:</p>
+                            <p>Упражнения на расслабление тонуса мышц лица, шеи и языка.</p>
+                            <p class="accent-p">Дыхательные практики:</p>
+                            <p>Дыхательные упражнения</p>
+                            <p class="accent-p">Коррекция звукопроизношения:</p>
+                            <p>Работа над правильным произношением звуков, устранение дефектов речи дислалии, ротацизма, сигматизма и т.д.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-4 col-md-5">
+                        <div class="service-1-top-composition-image">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-1-bottom-composition">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-4">
+                        <div class="service-1-bottom-image">
+
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <div class="service-1-bottom-content">
+                            <p class="accent-p">Развитие связной речи:</p>
+                            <p>Обучение построению логичных и грамматически правильных фраз, рассказов, повествований.</p>
+                            <p class="accent-p">Улучшение дикции и темпа речи:</p>
+                            <p>Рабта над четкостью произношения, регулированием темпа речи.</p>
+                            <p class="accent-p">Развитие словарного запаса:</p>
+                            <p>Расширение активного и пассивного словаря, обучение использованию богатого лексикона.</p>
+                            <p class="accent-p">Коррекция нарушений голоса:</p>
+                            <p>Работа с голосом, тембром, силой, высотой.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="service-2-page">
+
+        <div class="service-2-top-composition">
+            <div class="container">
+                <div class="row">
+                  <div class="col-4">
+
+                    <div class="service-2-top-composition-image">
+
+                    </div>
+
+                </div>
+                    <div class="col-8">
+
+                        <div class="service-2-top-composition-content">
+                            <div class="line"></div>
+                            <h2 class="h2">Коммуникативные навыки</h2>
+                            <p class="accent-p">Улучшения ораторских навыков:</p>
+                            <p>Развитие умения выступать перед аудиторией, повышение уверенности и выразительности в публичных выступлениях.</p>
+                            <p class="accent-p">Развитие навыков делевой коммуникации:</p>
+                            <p>Обучение эффективному ведению переговоров, деловой переписки и презентации идей в профессиональной среде.</p>
+                            <p class="accent-p">Развитие навыков импровизации:</p>
+                            <p>Обучение быстрому и уверенному реагированию в неожиданных ситуациях, развитие способности к спонтанной и эфеективной речи.</p>
+                            <p class="accent-p">Управление эмоциональным состоянием в речи:</p>
+                            <p>Работа над контролем эмоций во время общения, развитие эмоциональной грамотности и способности выражать чувства через речь.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-2-bottom-composition">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="service-2-bottom-content">
+                            <p class="accent-p">Активное слушание и обратная связь:</p>
+                            <p>Обучение техникам активного слушания, развитию эмпатии и навыкам предоставления конструктивной обратной связи.</p>
+                            <p class="accent-p">Эффективное использование невербальных сигналов:</p>
+                            <p>Обучение правильному использованию жестов, мимики и поз для услиления речевого воздейсвия.</p>
+                            <p class="accent-p">Развитие уверенности в общении:</p>
+                            <p>Повышение уверенности и комфорта в разных коммуникативных ситуациях, от личных разговоров до публичных выступлений.</p>
+                            <p class="accent-p">Работа с конфликтными ситуациями:</p>
+                            <p>Обучение техникам разрешения конфликтов и управления сложными коммуникативными ситуациями.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="service-3-page">
+
+      <div class="service-3-top-composition">
+          <div class="container">
+              <div class="row">
+                  <div class="col-8 col-md-7">
+
+                      <div class="service-3-top-composition-content">
+                          <div class="line"></div>
+                          <h2 class="h2">Социальные навыки</h2>
+                          <p class="accent-p">Речевые консультации:</p>
+                          <p>Обучение методам и приемам работы с имеющимися речевыми и психологическими проблемами, предоставление рекомендаций по развитию речи.</p>
+                          <p class="accent-p">Развитие социальных навыков:</p>
+                          <p>Обучение эффективному взаимодействию с окружающими, развитие навыков работы в группе, повышение уверенности в общении.</p>
+                          <p class="accent-p">Речевые тренинги и терапия:</p>
+                          <p>Комплексные программы, включающие упражнения по улучшению речи, совместно с нейропсихологическими методами для преодоления речевых нарушений.</p>
+                          <p class="accent-p">Психологическая адаптация к сложным жизненным ситуациям:</p>
+                          <p>Помощь в преодолении стресса и адаптации к изменениям, которые могут влиять на речевую деятельность (например, после травмы или в условиях хронической болезни).</p>
+
+                        </div>
+
+                  </div>
+                  <div class="col-4 col-md-5">
+                      <div class="service-3-top-composition-image">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="service-3-bottom-composition">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-5">
+                      <div class="service-3-bottom-image">
+
+                      </div>
+                  </div>
+
+                  <div class="col-7">
+                      <div class="service-3-bottom-content">
+                          <p class="accent-p">Коррекция нарушений речи, связанных с психологическими проблемами:</p>
+                          <p>Работа с расстройствами речи, вызванными эмоциональными и психическими состояниями.</p>
+                          <p class="accent-p">Психологическая поддержка и корреция эмоциональных состояний:</p>
+                          <p>Работа с тревожностью, страхами и низкой самооценкой, которые могут негативно влиять на речевую активность и уверенность в общении.</p>
+                          <p class="accent-p">Преодоление коммуникативных барьеров:</p>
+                          <p>Помощь в преодолении трудностей в общении, устранение барьеров, связанных с застенчивостью, страхом общения или психологическими блоками.</p>
+                      </div>
+                  </div>
+
+
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="questions">
+
+      <div class="questions-composition">
+          <h2 class="h2">SPEECH  ONLINE</h2>
+          <p>Часто задаваемые вопросы</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Может ли логопед помочь взрослым?</p></summary>
+                  <p>Ответ на вопрос 1: Это информация о чем-то важном.</p>
+                </details>
+              </div>
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Как часто нужно посещать речевые занятия?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Как понять что мне нужна помощь логопеда?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Можно ли улучшить речь при наличии хронических заболеваний?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Как долго длится курс занятий?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Как преодолеть страх общения и речевые барьеры?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Какие методы использует логопед для работы со взрослыми?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Могу ли я улучшить свою речь самостоятельно без специалистов?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Могу ли я улучшить свою речь самостоятельно?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Как занятия с логопедом могут помочь при публичных выступлениях?</p></summary>
+                  <p></p>
+                </details>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script>
+
+    $(document).ready(function(){
+    $("#menu-hamburger").click(function(){
+
+        $("#main-menu").toggleClass("active");
+        $(this).toggleClass("is-active");
+        console.log(1);
+    });
+    });
+
+    </script>
+</body>
+</html>
