@@ -6,16 +6,22 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://db.onlinewebfonts.com/c/5da49843f66caf14799662bd12aa55a2?family=Dream+Avenue" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/bezier-sans" rel="stylesheet">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.11/tiny-slider.css" rel="stylesheet" />
 
     <style>
 
 /*Hamburger*/
+
+/*<link href="https://db.onlinewebfonts.com/c/5da49843f66caf14799662bd12aa55a2?family=Dream+Avenue" rel="stylesheet">
+/*<link href="https://db.onlinewebfonts.com/c/5da49843f66caf14799662bd12aa55a2?family=Dream+Avenue" rel="stylesheet">
+/*<div class="home-link"><a class="home-ref" href="#home-page"><img src="./images/arrow-up-thin-thumb.png" alt=""></a></div>
+
+*/
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -72,579 +78,6 @@
     top: -10px; }
   .hamburger-inner::after {
     bottom: -10px; }
-
-/*
-   * 3DX
-   */
-.hamburger--3dx .hamburger-box {
-  perspective: 80px; }
-
-.hamburger--3dx .hamburger-inner {
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {
-    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.hamburger--3dx.is-active .hamburger-inner {
-  background-color: transparent !important;
-  transform: rotateY(180deg); }
-  .hamburger--3dx.is-active .hamburger-inner::before {
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--3dx.is-active .hamburger-inner::after {
-    transform: translate3d(0, -10px, 0) rotate(-45deg); }
-
-/*
-   * 3DX Reverse
-   */
-.hamburger--3dx-r .hamburger-box {
-  perspective: 80px; }
-
-.hamburger--3dx-r .hamburger-inner {
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .hamburger--3dx-r .hamburger-inner::before, .hamburger--3dx-r .hamburger-inner::after {
-    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.hamburger--3dx-r.is-active .hamburger-inner {
-  background-color: transparent !important;
-  transform: rotateY(-180deg); }
-  .hamburger--3dx-r.is-active .hamburger-inner::before {
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--3dx-r.is-active .hamburger-inner::after {
-    transform: translate3d(0, -10px, 0) rotate(-45deg); }
-
-/*
-   * 3DY
-   */
-.hamburger--3dy .hamburger-box {
-  perspective: 80px; }
-
-.hamburger--3dy .hamburger-inner {
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
-    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.hamburger--3dy.is-active .hamburger-inner {
-  background-color: transparent !important;
-  transform: rotateX(-180deg); }
-  .hamburger--3dy.is-active .hamburger-inner::before {
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--3dy.is-active .hamburger-inner::after {
-    transform: translate3d(0, -10px, 0) rotate(-45deg); }
-
-/*
-   * 3DY Reverse
-   */
-.hamburger--3dy-r .hamburger-box {
-  perspective: 80px; }
-
-.hamburger--3dy-r .hamburger-inner {
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .hamburger--3dy-r .hamburger-inner::before, .hamburger--3dy-r .hamburger-inner::after {
-    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.hamburger--3dy-r.is-active .hamburger-inner {
-  background-color: transparent !important;
-  transform: rotateX(180deg); }
-  .hamburger--3dy-r.is-active .hamburger-inner::before {
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--3dy-r.is-active .hamburger-inner::after {
-    transform: translate3d(0, -10px, 0) rotate(-45deg); }
-
-/*
-   * 3DXY
-   */
-.hamburger--3dxy .hamburger-box {
-  perspective: 80px; }
-
-.hamburger--3dxy .hamburger-inner {
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .hamburger--3dxy .hamburger-inner::before, .hamburger--3dxy .hamburger-inner::after {
-    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.hamburger--3dxy.is-active .hamburger-inner {
-  background-color: transparent !important;
-  transform: rotateX(180deg) rotateY(180deg); }
-  .hamburger--3dxy.is-active .hamburger-inner::before {
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--3dxy.is-active .hamburger-inner::after {
-    transform: translate3d(0, -10px, 0) rotate(-45deg); }
-
-/*
-   * 3DXY Reverse
-   */
-.hamburger--3dxy-r .hamburger-box {
-  perspective: 80px; }
-
-.hamburger--3dxy-r .hamburger-inner {
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .hamburger--3dxy-r .hamburger-inner::before, .hamburger--3dxy-r .hamburger-inner::after {
-    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.hamburger--3dxy-r.is-active .hamburger-inner {
-  background-color: transparent !important;
-  transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg); }
-  .hamburger--3dxy-r.is-active .hamburger-inner::before {
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--3dxy-r.is-active .hamburger-inner::after {
-    transform: translate3d(0, -10px, 0) rotate(-45deg); }
-
-/*
-   * Arrow
-   */
-.hamburger--arrow.is-active .hamburger-inner::before {
-  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
-
-.hamburger--arrow.is-active .hamburger-inner::after {
-  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
-
-/*
-   * Arrow Right
-   */
-.hamburger--arrow-r.is-active .hamburger-inner::before {
-  transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
-
-.hamburger--arrow-r.is-active .hamburger-inner::after {
-  transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
-
-/*
-   * Arrow Alt
-   */
-.hamburger--arrowalt .hamburger-inner::before {
-  transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
-.hamburger--arrowalt .hamburger-inner::after {
-  transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
-.hamburger--arrowalt.is-active .hamburger-inner::before {
-  top: 0;
-  transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
-  transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
-
-.hamburger--arrowalt.is-active .hamburger-inner::after {
-  bottom: 0;
-  transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
-  transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
-
-/*
-   * Arrow Alt Right
-   */
-.hamburger--arrowalt-r .hamburger-inner::before {
-  transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
-.hamburger--arrowalt-r .hamburger-inner::after {
-  transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
-.hamburger--arrowalt-r.is-active .hamburger-inner::before {
-  top: 0;
-  transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);
-  transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
-
-.hamburger--arrowalt-r.is-active .hamburger-inner::after {
-  bottom: 0;
-  transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);
-  transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
-
-/*
-   * Arrow Turn
-   */
-.hamburger--arrowturn.is-active .hamburger-inner {
-  transform: rotate(-180deg); }
-  .hamburger--arrowturn.is-active .hamburger-inner::before {
-    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
-  .hamburger--arrowturn.is-active .hamburger-inner::after {
-    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
-
-/*
-   * Arrow Turn Right
-   */
-.hamburger--arrowturn-r.is-active .hamburger-inner {
-  transform: rotate(-180deg); }
-  .hamburger--arrowturn-r.is-active .hamburger-inner::before {
-    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
-  .hamburger--arrowturn-r.is-active .hamburger-inner::after {
-    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
-
-/*
-   * Boring
-   */
-.hamburger--boring .hamburger-inner, .hamburger--boring .hamburger-inner::before, .hamburger--boring .hamburger-inner::after {
-  transition-property: none; }
-
-.hamburger--boring.is-active .hamburger-inner {
-  transform: rotate(45deg); }
-  .hamburger--boring.is-active .hamburger-inner::before {
-    top: 0;
-    opacity: 0; }
-  .hamburger--boring.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(-90deg); }
-
-/*
-   * Collapse
-   */
-.hamburger--collapse .hamburger-inner {
-  top: auto;
-  bottom: 0;
-  transition-duration: 0.13s;
-  transition-delay: 0.13s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--collapse .hamburger-inner::after {
-    top: -20px;
-    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
-  .hamburger--collapse .hamburger-inner::before {
-    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--collapse.is-active .hamburger-inner {
-  transform: translate3d(0, -10px, 0) rotate(-45deg);
-  transition-delay: 0.22s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger--collapse.is-active .hamburger-inner::after {
-    top: 0;
-    opacity: 0;
-    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
-  .hamburger--collapse.is-active .hamburger-inner::before {
-    top: 0;
-    transform: rotate(-90deg);
-    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-/*
-   * Collapse Reverse
-   */
-.hamburger--collapse-r .hamburger-inner {
-  top: auto;
-  bottom: 0;
-  transition-duration: 0.13s;
-  transition-delay: 0.13s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--collapse-r .hamburger-inner::after {
-    top: -20px;
-    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
-  .hamburger--collapse-r .hamburger-inner::before {
-    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--collapse-r.is-active .hamburger-inner {
-  transform: translate3d(0, -10px, 0) rotate(45deg);
-  transition-delay: 0.22s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger--collapse-r.is-active .hamburger-inner::after {
-    top: 0;
-    opacity: 0;
-    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
-  .hamburger--collapse-r.is-active .hamburger-inner::before {
-    top: 0;
-    transform: rotate(90deg);
-    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-/*
-   * Elastic
-   */
-.hamburger--elastic .hamburger-inner {
-  top: 2px;
-  transition-duration: 0.275s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  .hamburger--elastic .hamburger-inner::before {
-    top: 10px;
-    transition: opacity 0.125s 0.275s ease; }
-  .hamburger--elastic .hamburger-inner::after {
-    top: 20px;
-    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-
-.hamburger--elastic.is-active .hamburger-inner {
-  transform: translate3d(0, 10px, 0) rotate(135deg);
-  transition-delay: 0.075s; }
-  .hamburger--elastic.is-active .hamburger-inner::before {
-    transition-delay: 0s;
-    opacity: 0; }
-  .hamburger--elastic.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-270deg);
-    transition-delay: 0.075s; }
-
-/*
-   * Elastic Reverse
-   */
-.hamburger--elastic-r .hamburger-inner {
-  top: 2px;
-  transition-duration: 0.275s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  .hamburger--elastic-r .hamburger-inner::before {
-    top: 10px;
-    transition: opacity 0.125s 0.275s ease; }
-  .hamburger--elastic-r .hamburger-inner::after {
-    top: 20px;
-    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-
-.hamburger--elastic-r.is-active .hamburger-inner {
-  transform: translate3d(0, 10px, 0) rotate(-135deg);
-  transition-delay: 0.075s; }
-  .hamburger--elastic-r.is-active .hamburger-inner::before {
-    transition-delay: 0s;
-    opacity: 0; }
-  .hamburger--elastic-r.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(270deg);
-    transition-delay: 0.075s; }
-
-/*
-   * Emphatic
-   */
-.hamburger--emphatic {
-  overflow: hidden; }
-  .hamburger--emphatic .hamburger-inner {
-    transition: background-color 0.125s 0.175s ease-in; }
-    .hamburger--emphatic .hamburger-inner::before {
-      left: 0;
-      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }
-    .hamburger--emphatic .hamburger-inner::after {
-      top: 10px;
-      right: 0;
-      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }
-  .hamburger--emphatic.is-active .hamburger-inner {
-    transition-delay: 0s;
-    transition-timing-function: ease-out;
-    background-color: transparent !important; }
-    .hamburger--emphatic.is-active .hamburger-inner::before {
-      left: -80px;
-      top: -80px;
-      transform: translate3d(80px, 80px, 0) rotate(45deg);
-      transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
-    .hamburger--emphatic.is-active .hamburger-inner::after {
-      right: -80px;
-      top: -80px;
-      transform: translate3d(-80px, 80px, 0) rotate(-45deg);
-      transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
-
-/*
-   * Emphatic Reverse
-   */
-.hamburger--emphatic-r {
-  overflow: hidden; }
-  .hamburger--emphatic-r .hamburger-inner {
-    transition: background-color 0.125s 0.175s ease-in; }
-    .hamburger--emphatic-r .hamburger-inner::before {
-      left: 0;
-      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }
-    .hamburger--emphatic-r .hamburger-inner::after {
-      top: 10px;
-      right: 0;
-      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }
-  .hamburger--emphatic-r.is-active .hamburger-inner {
-    transition-delay: 0s;
-    transition-timing-function: ease-out;
-    background-color: transparent !important; }
-    .hamburger--emphatic-r.is-active .hamburger-inner::before {
-      left: -80px;
-      top: 80px;
-      transform: translate3d(80px, -80px, 0) rotate(-45deg);
-      transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
-    .hamburger--emphatic-r.is-active .hamburger-inner::after {
-      right: -80px;
-      top: 80px;
-      transform: translate3d(-80px, -80px, 0) rotate(45deg);
-      transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
-
-/*
-   * Minus
-   */
-.hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
-
-.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
-  opacity: 0;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
-
-.hamburger--minus.is-active .hamburger-inner::before {
-  top: 0; }
-
-.hamburger--minus.is-active .hamburger-inner::after {
-  bottom: 0; }
-
-/*
-   * Slider
-   */
-.hamburger--slider .hamburger-inner {
-  top: 2px; }
-  .hamburger--slider .hamburger-inner::before {
-    top: 10px;
-    transition-property: transform, opacity;
-    transition-timing-function: ease;
-    transition-duration: 0.15s; }
-  .hamburger--slider .hamburger-inner::after {
-    top: 20px; }
-
-.hamburger--slider.is-active .hamburger-inner {
-  transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--slider.is-active .hamburger-inner::before {
-    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-    opacity: 0; }
-  .hamburger--slider.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-90deg); }
-
-/*
-   * Slider Reverse
-   */
-.hamburger--slider-r .hamburger-inner {
-  top: 2px; }
-  .hamburger--slider-r .hamburger-inner::before {
-    top: 10px;
-    transition-property: transform, opacity;
-    transition-timing-function: ease;
-    transition-duration: 0.15s; }
-  .hamburger--slider-r .hamburger-inner::after {
-    top: 20px; }
-
-.hamburger--slider-r.is-active .hamburger-inner {
-  transform: translate3d(0, 10px, 0) rotate(-45deg); }
-  .hamburger--slider-r.is-active .hamburger-inner::before {
-    transform: rotate(45deg) translate3d(5.71429px, -6px, 0);
-    opacity: 0; }
-  .hamburger--slider-r.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(90deg); }
-
-/*
-   * Spin
-   */
-.hamburger--spin .hamburger-inner {
-  transition-duration: 0.22s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--spin .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-  .hamburger--spin .hamburger-inner::after {
-    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--spin.is-active .hamburger-inner {
-  transform: rotate(225deg);
-  transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger--spin.is-active .hamburger-inner::before {
-    top: 0;
-    opacity: 0;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-  .hamburger--spin.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(-90deg);
-    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-/*
-   * Spin Reverse
-   */
-.hamburger--spin-r .hamburger-inner {
-  transition-duration: 0.22s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--spin-r .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-  .hamburger--spin-r .hamburger-inner::after {
-    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--spin-r.is-active .hamburger-inner {
-  transform: rotate(-225deg);
-  transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger--spin-r.is-active .hamburger-inner::before {
-    top: 0;
-    opacity: 0;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-  .hamburger--spin-r.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(90deg);
-    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-/*
-   * Spring
-   */
-.hamburger--spring .hamburger-inner {
-  top: 2px;
-  transition: background-color 0s 0.13s linear; }
-  .hamburger--spring .hamburger-inner::before {
-    top: 10px;
-    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--spring .hamburger-inner::after {
-    top: 20px;
-    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--spring.is-active .hamburger-inner {
-  transition-delay: 0.22s;
-  background-color: transparent !important; }
-  .hamburger--spring.is-active .hamburger-inner::before {
-    top: 0;
-    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--spring.is-active .hamburger-inner::after {
-    top: 0;
-    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 10px, 0) rotate(-45deg); }
-
-/*
-   * Spring Reverse
-   */
-.hamburger--spring-r .hamburger-inner {
-  top: auto;
-  bottom: 0;
-  transition-duration: 0.13s;
-  transition-delay: 0s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--spring-r .hamburger-inner::after {
-    top: -20px;
-    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear; }
-  .hamburger--spring-r .hamburger-inner::before {
-    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--spring-r.is-active .hamburger-inner {
-  transform: translate3d(0, -10px, 0) rotate(-45deg);
-  transition-delay: 0.22s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger--spring-r.is-active .hamburger-inner::after {
-    top: 0;
-    opacity: 0;
-    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.22s linear; }
-  .hamburger--spring-r.is-active .hamburger-inner::before {
-    top: 0;
-    transform: rotate(90deg);
-    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-/*
-   * Stand
-   */
-.hamburger--stand .hamburger-inner {
-  transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }
-  .hamburger--stand .hamburger-inner::before {
-    transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--stand .hamburger-inner::after {
-    transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--stand.is-active .hamburger-inner {
-  transform: rotate(90deg);
-  background-color: transparent !important;
-  transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }
-  .hamburger--stand.is-active .hamburger-inner::before {
-    top: 0;
-    transform: rotate(-45deg);
-    transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger--stand.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(45deg);
-    transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-/*
-   * Stand Reverse
-   */
-.hamburger--stand-r .hamburger-inner {
-  transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }
-  .hamburger--stand-r .hamburger-inner::before {
-    transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--stand-r .hamburger-inner::after {
-    transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--stand-r.is-active .hamburger-inner {
-  transform: rotate(-90deg);
-  background-color: transparent !important;
-  transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }
-  .hamburger--stand-r.is-active .hamburger-inner::before {
-    top: 0;
-    transform: rotate(-45deg);
-    transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger--stand-r.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(45deg);
-    transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
 /*
    * Squeeze
    */
@@ -669,59 +102,9 @@
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Vortex
-   */
-.hamburger--vortex .hamburger-inner {
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
-  .hamburger--vortex .hamburger-inner::before, .hamburger--vortex .hamburger-inner::after {
-    transition-duration: 0s;
-    transition-delay: 0.1s;
-    transition-timing-function: linear; }
-  .hamburger--vortex .hamburger-inner::before {
-    transition-property: top, opacity; }
-  .hamburger--vortex .hamburger-inner::after {
-    transition-property: bottom, transform; }
 
-.hamburger--vortex.is-active .hamburger-inner {
-  transform: rotate(765deg);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
-  .hamburger--vortex.is-active .hamburger-inner::before, .hamburger--vortex.is-active .hamburger-inner::after {
-    transition-delay: 0s; }
-  .hamburger--vortex.is-active .hamburger-inner::before {
-    top: 0;
-    opacity: 0; }
-  .hamburger--vortex.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(90deg); }
 
-/*
-   * Vortex Reverse
-   */
-.hamburger--vortex-r .hamburger-inner {
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
-  .hamburger--vortex-r .hamburger-inner::before, .hamburger--vortex-r .hamburger-inner::after {
-    transition-duration: 0s;
-    transition-delay: 0.1s;
-    transition-timing-function: linear; }
-  .hamburger--vortex-r .hamburger-inner::before {
-    transition-property: top, opacity; }
-  .hamburger--vortex-r .hamburger-inner::after {
-    transition-property: bottom, transform; }
 
-.hamburger--vortex-r.is-active .hamburger-inner {
-  transform: rotate(-765deg);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
-  .hamburger--vortex-r.is-active .hamburger-inner::before, .hamburger--vortex-r.is-active .hamburger-inner::after {
-    transition-delay: 0s; }
-  .hamburger--vortex-r.is-active .hamburger-inner::before {
-    top: 0;
-    opacity: 0; }
-  .hamburger--vortex-r.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(-90deg); }
 
 /*Site*/ 
 
@@ -729,6 +112,63 @@ body {
     overflow-X: hidden;
     margin: 0;
     top:0;
+}
+
+a.menu-link:link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+a.menu-link:visited {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+a.menu-link:focus {
+  /*text-shadow: #fff 2px;*/
+}
+a.home-ref img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+a.home-ref:link {
+  color: rgba(0, 0, 0, 0.6);
+}
+a.home-ref:visited {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+a:focus {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+a:link {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+a:visited {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+a:focus {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+
+.home-link {
+  display: flex;
+  justify-content: flex-end;
+  height: 6vh;
+  font-size: 16pt;
+  padding-right: 20px;
+  padding-bottom: 4px;
+}
+
+section {
+  display: block;
 }
 
 .h1, .h2, .h3, .h4, .h5 {
@@ -748,6 +188,10 @@ body {
     color: #fff;
 }
 
+.with-blur {
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
 .nav {
     margin: 0;
     list-style: none;
@@ -810,19 +254,15 @@ body {
 /*Styles of open-menu element*/
 
 .hamburger {
-    position: relative;
-    float: right;
-    z-index: 99;
+    position: absolute;
     width: 50px;
     height: 50px;
+    z-index: 99;
 }
 
 .hamburger-box {
     top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
+    display: block;
     position: relative;
 }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
@@ -884,6 +324,36 @@ body {
     padding: 0 12px;
 }
 
+.call-social {
+    position: relative;
+    display: flex;
+    bottom: 0;
+    height: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    flex-direction: row;
+}
+.call-social .soc-call {
+  display: flex;
+  flex-direction: row;
+}
+.call-social .soc-call a {
+  display: block;
+    color:rgba(255, 255, 255, 0.6); 
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin: 25px 0 12px 0;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.25 ease;
+    z-index: 100;
+}
+.link-call {
+  padding: 0px 10px;
+}
+
 
 .soc {
     margin: auto;
@@ -896,13 +366,13 @@ body {
 .soc a {
     display: block;
     color:rgba(255, 255, 255, 0.4); 
-    font-size: 24px;
+    font-size: 22px;
     background-color: rgba(0, 0, 0, 0.2);
-    height: 52px;
-    width: 52px;
+    height: 50px;
+    width: 50px;
     text-align: center;
     margin:20px 0;
-    line-height: 52px;
+    line-height: 50px;
     border-radius: 50%;
     transition: background-color 0.25 ease;
     z-index: 100;
@@ -956,6 +426,7 @@ body {
 
 .about-me {
     background-color: rgb(241, 238, 235);
+    height: 100%;
 }
 
 
@@ -966,7 +437,7 @@ body {
 }
 
 .about-me-content {
-    padding: 20px 0px;
+    padding: 20px 0px 0px 0px;
     font-size: 10pt;
 }
 
@@ -1014,11 +485,12 @@ body {
 
 .service-page {
     height: 100vh;
-    background-color: rgb(214, 207, 200);
+    background-color: rgb(241, 238, 235);
 }
 
 .about-service {
-    height: 40%;
+    height: 40vh;
+    background-color: rgb(214, 207, 200);
 }
 
 .about-service-title {
@@ -1027,6 +499,12 @@ body {
     align-items: center;
     padding-left: 40px;
 }
+.about-service-content {
+  display: flex;
+    height: 40vh;
+    align-items: center;
+}
+
 .about-service .h1 {
     font-size: 50pt;   
     letter-spacing: 4px;  
@@ -1046,7 +524,7 @@ body {
 }
 
 .service-items {
-    height: 60%;
+    height: 50vh;
     width: 100%;
     background-color: rgb(241, 238, 235);
     display: flex;
@@ -1074,6 +552,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 8pt;
 }
 
 .service-card-2 {
@@ -1088,6 +568,8 @@ body {
     justify-content: center;
     text-align: center;
     color: #fff;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
 }
 
 .service-card-3 {
@@ -1101,6 +583,8 @@ body {
   justify-content: center;
   text-align: center;
   color: #fff;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
 
 }
 
@@ -1125,7 +609,7 @@ body {
 
 .service-1-top-composition-content h2 {
     position: relative;
-    margin-top: 60px;
+    margin-top: 50px;
     text-align: right;
     font-family: 'Bezier Sans', sans-serif;
 }
@@ -1151,7 +635,7 @@ body {
     font-size: 10pt;
 }
 .service-1-bottom-composition {
-    margin-top: 20px;
+    margin-top: 4px;
 }
 
 .service-1-bottom-image {
@@ -1163,6 +647,21 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+.service-1-bottom-content {
+  display: flex;
+  height: 25vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: space-between;
+}
+.service-1-bottom-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
 
 .accent-p {
   font-weight: bold;
@@ -1197,11 +696,12 @@ body {
 }
 
 .service-2-top-composition-image {
-  background-image: url('./images/6-top.png');
+  background-image: url('https://cdn.mindyourstyle.gr/wp-content/uploads/2024/04/kontomaniko-poukamiso-poplina-240923.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 60vh;
+  height: 30vh;
+  background-size: 400px auto;
   
 }
 .service-2-top-composition-content p {
@@ -1249,7 +749,7 @@ body {
     font-size: 8pt;
 }
 .service-3-bottom-composition {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .service-3-bottom-image {
@@ -1262,6 +762,80 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+
+
+/*Callback page*/
+
+.form-call {
+  height: 100vh;
+  background-color: rgb(214, 207, 200);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 50;
+}
+
+.form-call-title {
+  text-transform: uppercase;
+  font-family: 'Bezier Sans';
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.callback-form {
+  font-family: 'Bezier Sans';
+  background-color: rgb(214, 207, 200);
+  font-size: 9pt;
+}
+
+.callback-form input {
+  background-color: rgb(214, 207, 200);
+  width: 100%;
+  border: #000 2px solid;
+  height: 34px;
+  padding: 8px;
+}
+.callback-form textarea {
+  width: 100%;
+  background-color: rgb(214, 207, 200);
+  border: #000 2px solid;
+  height: auto;
+  padding: 8px;
+}
+.callback-form .form-addition-text {
+  text-align: right;
+  font-size: 10pt;
+}
+
+.callback-form button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  height: 28px;
+  line-height: 28px;
+  font-family: 'Bezier Sans';
+  letter-spacing: 2px;
+  font-size: 10pt;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  width: 160px;
+  
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+.callback-form .submit-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 
 /*Question page*/
@@ -1279,31 +853,35 @@ body {
     text-align: center;
     color: #000;
 }
+.questions-composition .answer-p {
+  font-style: italic;
+}
 
 .questions-composition p {
-  text-transform: uppercase;
     margin-top: 20px;
     font-family: 'Bezier Sans', sans-serif;
     letter-spacing: 1px;
-  font-size: 10pt;
+  font-size: 9pt;
   padding: 0;
   margin: 0;
-  margin-bottom: 20px;
+  margin: 10px 4px;
 }
 
 .questions-composition .summary-p {
+  font-weight: bold;
   text-transform: uppercase;
     margin-top: 20px;
     font-family: 'Bezier Sans', sans-serif;
     letter-spacing: 1px;
   font-size: 8pt;
-  padding: 0;
+  padding: 4px 0 0 0;
   margin: 0;
 }
 
 details > summary::marker {
-  display: none;
-  content: '';
+  font-size: 8pt;
+  /*display: none;
+  content: '';*/
 }
 
 details {
@@ -1313,7 +891,8 @@ details {
 
 .questions {
     padding: 20px 30px;
-    background-image: url('./images/2-about-school-background.png');
+    /*background-image: url('./images/2-about-school-background.png');*/
+    background-image: url('https://assets.isu.pub/document-structure/230612045852-f64dc2b8fadd979ff1cc81d90e620cb1/v1/4f724edc55c55c0ae7990ad7c70d064c.jpeg');
     height: 100vh;
     background-color: #3d3630;
     background-position: center;
@@ -1331,6 +910,59 @@ details {
 
 
 
+/*Review page*/
+.reviews {
+    padding: 60px 40px;
+   /* background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/509b99bcedbb9d18211aff40a5631dd4.jpeg');*/
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(61, 54, 48);
+}
+.reviews-composition {
+    font-family: 'Bezier Sans';
+    background-color: rgba(222, 184, 135, 0.8); 
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+}
+.review-h2 {
+  text-align: center;
+}
+.review-text {
+  padding-top: 20px;
+  font-size: 10pt;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+.review-header, .review-date {
+  font-size: 9pt;
+  letter-spacing: 1px;;
+}
+
+.controls {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    left: 0;    
+    width: 100%;    
+    top: 50%;
+    transform: translatey(-50%);
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    display: none;
+}
+
+
+
 
 
 
@@ -1341,659 +973,35 @@ details {
     font-style: normal; 
     font-weight: normal;
 }
-
+*/
+/*
 @font-face {
-    font-family: "DreamAvenueRegular";  
-    src: url("./fonts/DreamAvenue-Regular.ttf") format("truetype"); 
+    font-family: "Dream Avenue";  
+    src: url("./fonts/Dream Avenue-Regular.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal;
 }
-*/
+    */
 
-@media (max-width: 1200px) {
-
-}
-
-@media (max-width: 992px) {
-    
-}
-
-@media (max-width: 768px) {
-    .header-composition .h1 {
-        font-size: 46pt;
-        margin-bottom: 30px;
-        font-family: "Dream Avenue";
-    }
-    .header-composition p {
-        margin-top: 20px;
-        font-size: 14pt;
-    }
-    .header-social {
-        border-left: none;
-    }
-    .soc a {
-        display: block;
-        color: rgba(255, 255, 255, 0.4);
-        font-size: 42px;
-        background-color: rgba(0, 0, 0, 0.2);
-        height: 84px;
-        width: 84px;
-        text-align: center;
-        margin: 60px 0;
-        line-height: 84px;
-        border-radius: 50%;
-        transition: background-color 0.25 ease;
-    }
-
-    .about-me-content p {
-        font-size: 10pt;
-        text-transform: uppercase;
-        font-family: 'Bezier Sans', sans-serif;
-        margin-top: 10px;
-        letter-spacing: 2px;
-    }
-
-    .about-school-composition p {
-        margin-top: 40px;
-    }
-
-    .about-school {
-      padding: 40px 20px;
-    }
-
-    .about-school-composition {
-      padding: 5px;
-    }
-
-  
-
-    /*Speech product*/
-    
-
-.service-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0 5px;
-}
-
-.service-card {
-    height: 100px;
-    width: 100px;
-    background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/509b99bcedbb9d18211aff40a5631dd4.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.service-card-2 {
-  /*background-image: url('https://images.squarespace-cdn.com/content/v1/645349357d5a960e6edc1be9/753bab0f-234c-4e36-a80a-b57db08f7cda/13.png?format=1500w');*/
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlpzxWBQuVs9BytCNsRMLdECbVDBd2UF7T0k7Gf0wJwDSrjlCX6knSSSzHa-OjgpymK6s&usqp=CAU');
-  background-size: cover;
-  background-position: center;
-  height: 100px;
-  width: 100px;
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
-
-.service-card-3 {
-  background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/13bf58421d3effb1a8ac42394bdcaa41.jpeg');
-  background-size: cover;
-  background-position: center;
-  height: 100px;
-  width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-
-}
-.service-card .h4 {
-    font-size: 7pt;
-    color: black;
-    white-space: wrap;
-}
-.service-card-2 .h4 {
-    font-size: 7pt;
-    color: #fff;
-    white-space: wrap;
-}
-.service-card-3 .h4 {
-    font-size: 7pt;
-    color: #000;
-    white-space: wrap;
-}
-
-
-
-/*Service page*/
-
-.service-page {
-  background-color:   rgb(241,238,235);
-}
-
-.about-service {
-    height: 70vh;
-    background-color:   rgb(214,207,200);
-}
-
-.about-service-title {
-    display: flex;
-    height: auto;
-    width: 100%;
-    align-items: center;
-    padding: 20px 40px 10px 40px;
-    text-align: center;
-    justify-content: center;
-}
-.about-service .h1 {
-    margin: 10px 0px;
-    font-size: 26pt;   
-    letter-spacing: 0px; 
-    margin-bottom: 4px; 
+    /*
+@font-face {
     font-family: "Dream Avenue";  
-    white-space: nowrap;
+    src: url("./fonts/Dream_Avenue.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
 }
+    */
 
-.about-service p {
-    margin: 0;
-    padding: 10px;
-    text-align: left;
-    font-size: 12pt;   
-    letter-spacing: 2px;  
-    font-family: "Bezier Sans";  
-    white-space: wrap;
-    line-height: 1.2; 
-}
-
-.service-items {
-    height: 30vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+@font-face {
+    font-family: "Dream Avenue";  
+    src: url("/SpeechOnline/fonts/Dream_Avenue.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
 }
 
 
-/*Service 1 page*/
-.service-1-page p {
-    margin-bottom: 0px;
-    font-family: 'Bezier Sans', sans-serif;
-    font-size: 9pt;
-}
-.service-1-bottom-image {
-  height: 45vh;
-}
-.service-1-top-composition-content .line {
-    display: block;
-    margin-right: -25px;
-    float: right;
-    margin-top: -10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 1px;
-    width: 50%;
-}
-
-.service-1-top-composition-content h2 {
-    position: relative;
-    margin-top: 20px;
-    text-align: right;
-    font-family: 'Bezier Sans', sans-serif;
-    white-space: nowrap;
-    font-size: 16pt;
-    margin-bottom: 4;
-}
-.service-1-bottom-composition {
-    margin-top: 4px;
-}
-/*Service 2 page*/
-.service-2-top-composition {
-  margin-bottom: 4px;
-}
-.service-2-page h2 {
-    position: relative;
-    margin: 5px 0 5px 0;
-    text-align: left;
-    font-family: 'Bezier Sans', sans-serif;
-    font-size: 15pt;
-}
-.service-2-top-composition-image {
-  background-image: url('https://cdn.mindyourstyle.gr/wp-content/uploads/2024/04/kontomaniko-poukamiso-poplina-240923.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 55vh;
-  
-}
-.service-2-page p {
-    margin: 0;
-    font-family: 'Bezier Sans', sans-serif;
-    font-size: 8pt;
-    line-height: 1.25;
-}
-/*Service page 3*/
-.service-3-bottom-image {
-    background-image: url('https://btrkenya.co.ke/images/blogs/1680244928-0.jpeg');
-    /*background-image: url('./images/5-top.png');*/
-    display: flex;
-    width: 100%;
-    height: 45vh;
-    background-position: center;
-    background-size: cover;
-}
-
-.service-3-page p {
-    margin-bottom: 0px;
-    font-family: 'Bezier Sans', sans-serif;
-    font-size: 7pt;
-    line-height: 1.3;
-}
-
-.service-3-top-composition-image {
-    background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/13bf58421d3effb1a8ac42394bdcaa41.jpeg');
-    /* background-image: url('./images/5-top.png'); */
-    display: flex;
-    width: 100%;
-    height: 45vh;
-    background-position: center;
-    background-size: cover;
-}
-
-.service-3-top-composition-content h2 {
-  position: relative;
-    margin-top: 20px;
-    text-align: right;
-    font-family: 'Bezier Sans', sans-serif;
-    white-space: nowrap;
-    font-size: 14pt;
-    margin-bottom: 4px;
-}
-.service-3-top-composition-content .line {
-    display: block;
-    margin-right: -25px;
-    float: right;
-    margin-top: -10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 1px;
-    width: 50%;
-}
-.service-3-bottom-composition {
-  margin-top: 4px;
-}
-
-
-
-
-/*Question page*/
-
-.questions {
-  padding: 10px 15px;
-}
-.questions-composition {
-  padding: 10px 4px;
-}
-.questions h2 {
-    font-size: 26pt;
-    letter-spacing: 0px;
-    font-family: "Dream Avenue";
-    white-space: nowrap;
-}
-
-}
-
-@media (max-width: 576px) {
-
-
-    .header-composition .h1 {
-        font-size: 29pt;
-        margin-bottom: 60px;
-    }
-    .header-composition p {
-        font-size: 11pt;
-    }
-    .header-social {
-        border-left: none;
-    }
-
-}
-
-
-
-
-
-
-     </style>
-
-    <title>Document</title>
-</head>
-<body>
-
-    <header class="site-header">
-
-        
-    <div id="main-menu" class="site-menu-composition">
-        
-        <div class="site-menu">
-            <ul class="nav">
-                <li class="menu-item"><a>Про меня</a></li>
-                <li class="menu-item"><a>Мои услуги</a></li>
-                <li class="menu-item"><a>Записаться на занятие</a></li>
-                <li class="menu-item"><a>Полезные статьи</a></li>
-                <li class="menu-item"><a>Отзывы клиентов</a></li>
-                <li class="menu-item"><a>Частые вопросы</a></li>
-
-            </ul>
-        </div>
-
-        
-    </div>
-    <a id="menu-hamburger" href="#main-menu" class="hamburger hamburger--squeeze">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-    </a> 
-   
-
-        
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="header-flex">
-
-                                <div class="flex-center">
-
-                                    <div class="header-composition">
-                                    <div class="welcome">
-                                        <h1 class="h1">Speech online</h1>
-                                        <p>Искусство речи без стен и границ</p>
-                                    </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="header-social">
-                    
-                    <nav class="soc">
-                        <ul>
-                            <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
-                        </ul>
-                    </nav>
-
-                </div>
-
-
-        
-    </header>
-
-    <section class="about-school">
-
-        <div class="about-school-composition">
-            <h2 class="h2">Добро пожаловать в мир уверенной речи</h2>
-
-            <p>Это место, где найдется все для поддержки речевого и психологического развития. Профессиональное решение различных проблем, связанных с речью и эмоциональным состоянием.</p>
-
-        </div>
-
-      </section>
-
-    <section class="about-me">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1">
-                </div>
-                <div class="col-12 col-md-5 col-lg-5">
-                    <img src="https://4f08810874.cbaul-cdnwnd.com/fa1fe1e2b8b66b2b93fe22d7c427178e/200000012-c69a6c69a8/Imagem%20do%20WhatsApp%20de%202024-05-21%20%C3%A0%28s%29%2020.11.51_731ccafb.jpeg?ph=4f08810874" class="about-me-image">
-                </img>
-                </div>
-                <div class="col col-md-6 col-lg-6">
-                    <div class="about-me-content">
-                        <h4 class="h4">Специалист по речевой коррекции и коммуникации. Логопсихолог.</h2>
-                            
-                            <p>"Грешно думать, что логопедия только для детей. Ведь речь - главный инструмент, он же и оружие."</p>
-                            <strong>Наталья - проводник в мир речевого совершенства</strong>
-                            <p class="default-p">Эксперт в области речевого развития, специалист по психолого-речевой коррекции и коммуникации.</p>
-
-                            <p>Цель - помощь взрослым и подросткам развить уверенность в общении и преодолеть речевые трудности.</p>
-
-                            <p>Где основная задача - не только исправить речевые нарушения, но и развить навыки общения, улучшить социальное взаимодействие и повысить уверенность в себе.</p>
-
-                            <p class="content-p-italic">Мой подход основан на гармоничном сочетании логопедии и психологии, что позволяет создать комфортную атмосферу для обучения и достижения устойчивых результатов.</p>
-
-                            <p class="content-p-italic">Давайте вместе откроем новые горизонты общения!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="service-page">
-        <div class="about-service">
-
-            <div class="container">
-                <div class="row">
-
-
-                    <div class="col-12 col-md-5"><div class="about-service-title"><h1 class="h1">Speech product</h1></div></div>
-                    <div class="col-12 col-md-7"><p>С помощью индивидуально подобранных методик работа включает корречцию и развитие речевых навыков, улучшение произношения, артикуляции, дикции, обучение эффективному общению, активному слушанию, умению вести диалог, тренировка навыков публичных выступлений, психологическая поддержка речевых навыков, помощь в преодолении эмоциональных трудностей, психологических барьеров и многое другое</p></div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="service-items">
-                    <div class="service-item">
-                        <div class="service-card">
-                            <h4 class="h4">Речевые навыки</h4>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-card-2">
-                            <h4 class="h4">Коммуникативные навыки</h4>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-card-3">
-                            <h4 class="h4">Социальные навыки</h4>
-                        </div>
-                    </div>
-        </div>
-            
-
-    </section>
-
-    <section class="service-1-page">
-
-        <div class="service-1-top-composition">
-            <div class="container">
-                <div class="row">
-                    <div class="col-8 col-md-7">
-
-                        <div class="service-1-top-composition-content">
-                            <div class="line"></div>
-                            <h2 class="h2">Речевые навыки</h2>
-                            <p class="accent-p">Работа над артикуляцией:</p>
-                            <p>Упражнения на расслабление тонуса мышц лица, шеи и языка.</p>
-                            <p class="accent-p">Дыхательные практики:</p>
-                            <p>Дыхательные упражнения</p>
-                            <p class="accent-p">Коррекция звукопроизношения:</p>
-                            <p>Работа над правильным произношением звуков, устранение дефектов речи дислалии, ротацизма, сигматизма и т.д.</p>
-                        </div>
-
-                    </div>
-                    <div class="col-4 col-md-5">
-                        <div class="service-1-top-composition-image">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="service-1-bottom-composition">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-4">
-                        <div class="service-1-bottom-image">
-
-                        </div>
-                    </div>
-
-                    <div class="col-8">
-                        <div class="service-1-bottom-content">
-                            <p class="accent-p">Развитие связной речи:</p>
-                            <p>Обучение построению логичных и грамматически правильных фраз, рассказов, повествований.</p>
-                            <p class="accent-p">Улучшение дикции и темпа речи:</p>
-                            <p>Рабта над четкостью произношения, регулированием темпа речи.</p>
-                            <p class="accent-p">Развитие словарного запаса:</p>
-                            <p>Расширение активного и пассивного словаря, обучение использованию богатого лексикона.</p>
-                            <p class="accent-p">Коррекция нарушений голоса:</p>
-                            <p>Работа с голосом, тембром, силой, высотой.</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="service-2-page">
-
-        <div class="service-2-top-composition">
-            <div class="container">
-                <div class="row">
-                  <div class="col-4">
-
-                    <div class="service-2-top-composition-image">
-
-                    </div>
-
-                </div>
-                    <div class="col-8">
-
-                        <div class="service-2-top-composition-content">
-                            <div class="line"></div>
-                            <h2 class="h2">Коммуникативные навыки</h2>
-                            <p class="accent-p">Улучшения ораторских навыков:</p>
-                            <p>Развитие умения выступать перед аудиторией, повышение уверенности и выразительности в публичных выступлениях.</p>
-                            <p class="accent-p">Развитие навыков делевой коммуникации:</p>
-                            <p>Обучение эффективному ведению переговоров, деловой переписки и презентации идей в профессиональной среде.</p>
-                            <p class="accent-p">Развитие навыков импровизации:</p>
-                            <p>Обучение быстрому и уверенному реагированию в неожиданных ситуациях, развитие способности к спонтанной и эфеективной речи.</p>
-                            <p class="accent-p">Управление эмоциональным состоянием в речи:</p>
-                            <p>Работа над контролем эмоций во время общения, развитие эмоциональной грамотности и способности выражать чувства через речь.</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="service-2-bottom-composition">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="service-2-bottom-content">
-                            <p class="accent-p">Активное слушание и обратная связь:</p>
-                            <p>Обучение техникам активного слушания, развитию эмпатии и навыкам предоставления конструктивной обратной связи.</p>
-                            <p class="accent-p">Эффективное использование невербальных сигналов:</p>
-                            <p>Обучение правильному использованию жестов, мимики и поз для услиления речевого воздейсвия.</p>
-                            <p class="accent-p">Развитие уверенности в общении:</p>
-                            <p>Повышение уверенности и комфорта в разных коммуникативных ситуациях, от личных разговоров до публичных выступлений.</p>
-                            <p class="accent-p">Работа с конфликтными ситуациями:</p>
-                            <p>Обучение техникам разрешения конфликтов и управления сложными коммуникативными ситуациями.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="service-3-page">
-
-      <div class="service-3-top-composition">
-          <div class="container">
-              <div class="row">
-                  <div class="col-8 col-md-7">
-
-                      <div class="service-3-top-composition-content">
-                          <div class="line"></div>
-                          <h2 class="h2">Социальные навыки</h2>
-                          <p class="accent-p">Речевые консультации:</p>
-                          <p>Обучение методам и приемам работы с имеющимися речевыми и психологическими проблемами, предоставление рекомендаций по развитию речи.</p>
-                          <p class="accent-p">Развитие социальных навыков:</p>
-                          <p>Обучение эффективному взаимодействию с окружающими, развитие навыков работы в группе, повышение уверенности в общении.</p>
-                          <p class="accent-p">Речевые тренинги и терапия:</p>
-                          <p>Комплексные программы, включающие упражнения по улучшению речи, совместно с нейропсихологическими методами для преодоления речевых нарушений.</p>
-                          <p class="accent-p">Психологическая адаптация к сложным жизненным ситуациям:</p>
-                          <p>Помощь в преодолении стресса и адаптации к изменениям, которые могут влиять на речевую деятельность (например, после травмы или в условиях хронической болезни).</p>
-
-                        </div>
-
-                  </div>
-                  <div class="col-4 col-md-5">
-                      <div class="service-3-top-composition-image">
-
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="service-3-bottom-composition">
-          <div class="container">
-              <div class="row">
-
-                  <div class="col-5">
-                      <div class="service-3-bottom-image">
-
-                      </div>
-                  </div>
-
-                  <div class="col-7">
-                      <div class="service-3-bottom-content">
-                          <p class="accent-p">Коррекция нарушений речи, связанных с психологическими проблемами:</p>
-                          <p>Работа с расстройствами речи, вызванными эмоциональными и психическими состояниями.</p>
-                          <p class="accent-p">Психологическая поддержка и корреция эмоциональных состояний:</p>
-                          <p>Работа с тревожностью, страхами и низкой самооценкой, которые могут негативно влиять на речевую активность и уверенность в общении.</p>
-                          <p class="accent-p">Преодоление коммуникативных барьеров:</p>
-                          <p>Помощь в преодолении трудностей в общении, устранение барьеров, связанных с застенчивостью, страхом общения или психологическими блоками.</p>
-                      </div>
-                  </div>
-
-
-              </div>
-          </div>
-      </div>
-    </section>
-
-    <section class="questions">
-
-      <div class="questions-composition">
-          <h2 class="h2">SPEECH  ONLINE</h2>
-          <p>Часто задаваемые вопросы</p>
+/*  questions
+<p>Часто задаваемые вопросы</p>
           <div class="container">
             <div class="row">
               <div class="col-12 col-sm-6">
@@ -2066,6 +1074,1009 @@ details {
               </div>
             </div>
           </div>
+*/
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+
+
+  .nav li {
+    padding: 10px 10px;
+  }
+  .nav li a {
+    text-transform: uppercase;
+    white-space: wrap;
+    font-size: 16pt;
+    outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+a.menu-link:link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+a.menu-link:visited {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+a.menu-link:focus {
+  text-shadow: #fff 2px;
+}
+
+    .with-blur {
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      padding-left: 10px;
+    }
+    .header-composition .h1 {
+        font-size: 46pt;
+        margin-bottom: 30px;
+        font-family: "Dream Avenue";
+    }
+    .header-composition p {
+        margin-top: 20px;
+        font-size: 14pt;
+    }
+    .header-social {
+        border-left: none;
+        padding: 0px 20px;
+    }
+    .header-flex {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    align-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    }
+    .soc {
+      margin: 0;
+      display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        flex-direction: column-reverse;
+    }
+    .soc ul {
+      position: relative;
+    }
+    .soc a {
+        display: block;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 24px;
+        background-color: rgba(80, 80, 80, 0.2);
+        height: 50px;
+        width: 50px;
+        margin: 25px 0px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        transition: background-color 0.25 ease;
+    }
+    .header-social {
+
+    }
+    .soc li:nth-child(3) a {
+      margin-bottom: 70px;
+    }
+
+    
+
+    .about-me-content p {
+        font-size: 10pt;
+        text-transform: uppercase;
+        font-family: 'Bezier Sans', sans-serif;
+        margin-top: 10px;
+        letter-spacing: 2px;
+    }
+
+    .about-school-composition p {
+        margin-top: 40px;
+    }
+
+    .about-school {
+      padding: 40px 20px;
+    }
+
+    .about-school-composition {
+      padding: 5px;
+    }
+
+  
+
+    /*Speech product*/
+    
+
+.service-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0 5px;
+}
+
+.service-items {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
+}
+
+.service-card {
+    height: 120px;
+    width: 105px;
+    background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/509b99bcedbb9d18211aff40a5631dd4.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.6);
+}
+
+.service-card-2 {
+  /*background-image: url('https://images.squarespace-cdn.com/content/v1/645349357d5a960e6edc1be9/753bab0f-234c-4e36-a80a-b57db08f7cda/13.png?format=1500w');*/
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlpzxWBQuVs9BytCNsRMLdECbVDBd2UF7T0k7Gf0wJwDSrjlCX6knSSSzHa-OjgpymK6s&usqp=CAU');
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  width: 105px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.6);
+}
+
+.service-card-3 {
+  background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/13bf58421d3effb1a8ac42394bdcaa41.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  width: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.6);
+
+}
+.service-card .h4 {
+  font-size: 8pt;
+  letter-spacing: 1px;
+  /*font-family: 'Bezier Sans';*/
+    color: black;
+    white-space: wrap;
+}
+.service-card-2 .h4 {
+  font-size: 6pt;
+  letter-spacing: 1px;
+  /*font-family: 'Bezier Sans';*/
+    color: #fff;
+    white-space: wrap;
+}
+.service-card-3 .h4 {
+  font-size: 8pt;
+  letter-spacing: 1px;
+  /*font-family: 'Bezier Sans';*/
+    color: #000;
+    white-space: wrap;
+}
+
+/*Service page*/
+
+.service-page {
+  background-color:   rgb(241,238,235);
+}
+
+.about-service {
+    height: 60vh;
+    background-color:   rgb(214,207,200);
+}
+
+.about-service-title {
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    padding: 20px 40px 10px 40px;
+    text-align: center;
+    justify-content: center;
+}
+.about-service .h1 {
+    margin: 10px 0px;
+    font-size: 26pt;   
+    letter-spacing: 0px; 
+    margin-bottom: 4px; 
+    font-family: "Dream Avenue";  
+    white-space: nowrap;
+}
+
+.about-service p {
+    margin: 0;
+    padding: 10px;
+    padding-top: 0px;
+    text-align: left;
+    font-size: 10pt;   
+    letter-spacing: 2px;  
+    font-family: "Bezier Sans";  
+    white-space: wrap;
+    /*line-height: 1.2;*/
+    line-height: 1.3;
+    font-style: italic;
+}
+
+
+
+
+/*Service 1 page*/
+
+.service-1-page .row>*{
+    padding: 0px 4px;
+    padding-top: 0px;
+}
+.service-1-page p {
+    margin-bottom: 0px;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 9pt;
+    letter-spacing: 1px;
+}
+.service-1-page .accent-p {
+  margin-top: 3px;
+}
+.service-1-bottom-composition .accent-p:nth-child(1) {
+  margin-top: 0px;
+}
+.service-1-bottom-image {
+  height: 30vh;
+  background-size: 360px auto;
+}
+.service-1-top-composition-content .line {
+    display: block;
+    margin-right: -25px;
+    float: right;
+    margin-top: -10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 1px;
+    width: 50%;
+}
+
+.service-1-top-composition-content h2 {
+    position: relative;
+    margin-top: 20px;
+    text-align: right;
+    font-family: 'Bezier Sans', sans-serif;
+    white-space: nowrap;
+    font-size: 16pt;
+    margin-bottom: 4;
+}
+.service-1-top-composition-image {
+  height: 40vh;
+    background-position: center;
+    background-size: 360px auto;
+}
+.service-1-bottom-composition {
+    margin-top: 4px;
+}
+/*Service 2 page*/
+.service-2-top-composition {
+  margin-bottom: 4px;
+}
+.service-2-page .row>*{
+    padding: 0px 4px;
+    padding-top: 0px;
+}
+.service-2-page h2 {
+    position: relative;
+    margin: 5px 0 5px 0;
+    text-align: left;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 10.5pt;
+}
+.service-2-page .accent-p {
+    margin-top: 3px;
+}
+.service-2-top-composition-image {
+  background-image: url('https://cdn.mindyourstyle.gr/wp-content/uploads/2024/04/kontomaniko-poukamiso-poplina-240923.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 35vh;
+  background-size: 400px auto;
+  
+}
+.service-2-page p {
+    margin: 0;
+    font-family: 'Bezier Sans', sans-serif;
+    line-height: 1.25;
+    font-size: 8pt;
+    letter-spacing: 1px;
+}
+/*Service page 3*/
+.service-3-page .row>*{
+    padding: 0px 4px;
+    padding-top: 0px;
+}
+
+.service-3-bottom-image {
+    background-image: url('https://btrkenya.co.ke/images/blogs/1680244928-0.jpeg');
+    /*background-image: url('./images/5-top.png');*/
+    display: flex;
+    width: 100%;
+    height: 30vh;
+        background-position: center;
+        background-size: 400px auto;
+        position: relative;
+        z-index: 10;
+}
+
+.service-3-page p {
+    margin-bottom: 0px;
+    font-family: 'Bezier Sans', sans-serif;
+    font-size: 7pt;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+.service-3-page .accent-p {
+  margin-top: 3px;
+}
+
+
+.service-3-bottom-content .accent-p:nth-child(1) {
+  margin-top: 0px;
+}
+  
+
+.service-3-top-composition-image {
+    background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/13bf58421d3effb1a8ac42394bdcaa41.jpeg');
+    /* background-image: url('./images/5-top.png'); */
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-size: 170px auto;
+}
+
+.service-3-top-composition-content h2 {
+  position: relative;
+    margin-top: 20px;
+    text-align: right;
+    font-family: 'Bezier Sans', sans-serif;
+    white-space: nowrap;
+    font-size: 12pt;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.service-3-top-composition-content .line {
+    display: block;
+    margin-right: -25px;
+    float: right;
+    margin-top: -10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 1px;
+    width: 50%;
+}
+.service-3-bottom-composition {
+  margin-top: 4px;
+}
+
+
+
+
+/*Question page*/
+
+.questions {
+  padding: 10px 15px;
+}
+.questions-composition {
+  padding: 10px 4px;
+  background-color: rgba(222, 184, 135, 0.8);
+}
+.questions h2 {
+    font-size: 26pt;
+    letter-spacing: 0px;
+    font-family: "Dream Avenue";
+    white-space: nowrap;
+}
+
+
+/*Reviews page*/
+.reviews {
+    padding: 20px 15px;
+}
+
+.callback-form {
+  font-size: 10pt;
+}
+.callback-form input {
+  background-color: rgb(214, 207, 200);
+  width: 100%;
+  border: #000 2px solid;
+  height: 40px;
+  padding: 8px;
+}
+
+.callback-form .form-addition-text {
+  text-align: right;
+  font-size: 9pt;
+}
+
+.callback-form button {
+  margin-top: 10px;
+  height: 36px;
+  width: 120px;
+  font-family: 'Bezier Sans';
+  font-size: 7pt;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 6px;
+  line-height: 7px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.callback-form button:hover {
+	box-shadow: 0 4px 4px 4px rgb(40 40 40 / 45%), 0 2px 2px 2px rgb(40 40 40 / 30%);
+}
+.callback-form button:focus-visible {
+	box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+}
+
+@media (max-width: 576px) {
+
+    .header-composition {
+      margin-top: -70px;
+      padding-left: 20px;
+    }
+    .header-composition .h1 {
+        font-size: 29pt;
+        margin-bottom: 20px;
+    }
+    .header-composition p {
+      font-size: 9pt;
+      padding: 0 20px;
+      margin: 0;
+    }
+    .header-social {
+        border-left: none;
+    }
+
+
+}
+
+
+
+
+
+
+     </style>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <header id="home-page" class="site-header">
+      <div class="with-blur">
+        
+    <div id="main-menu" class="site-menu-composition">
+        
+        <div class="site-menu">
+            <ul class="nav">
+                <li class="menu-item"><a class="menu-link" href="#about-me"></a></li>
+                <li class="menu-item"><a class="menu-link" href="#speech-product">Speech product</a></li>
+                <li class="menu-item"><a class="menu-link" href="#callback">Записаться на занятие</a></li>
+                <li class="menu-item"><a class="menu-link" href="#faq">Частые вопросы</a></li>
+                <li class="menu-item"><a class="menu-link" href="#results">Результаты</a></li>
+                <li class="menu-item"><a class="menu-link">Speech connect</a></li>
+
+            </ul>
+        </div>
+
+        
+    </div>
+    <a id="menu-hamburger" href="#main-menu" class="hamburger hamburger--squeeze">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </a> 
+   
+
+        
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="header-flex">
+
+                                <div class="flex-center">
+
+                                    <div class="header-composition">
+                                    <div class="welcome">
+                                        <h1 class="h1">Speech online</h1>
+                                        <p>Искусство речи без стен и границ</p>
+                                    </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-social">
+                    
+                    <nav class="soc">
+                        <ul>
+                            <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
+      </div>
+    </header>
+
+    <section id="about-school" class="about-school">
+
+        <div class="about-school-composition">
+            <h2 class="h2">Добро пожаловать в мир уверенной речи</h2>
+
+            <p>Это место, где найдется все для поддержки речевого и психологического развития. Профессиональное решение различных проблем, связанных с речью и эмоциональным состоянием.</p>
+
+        </div>
+
+      </section>
+
+    <section id="about-me" class="about-me">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-12 col-md-5 col-lg-5">
+                    <img src="https://4f08810874.cbaul-cdnwnd.com/fa1fe1e2b8b66b2b93fe22d7c427178e/200000012-c69a6c69a8/Imagem%20do%20WhatsApp%20de%202024-05-21%20%C3%A0%28s%29%2020.11.51_731ccafb.jpeg?ph=4f08810874" class="about-me-image">
+                </img>
+                </div>
+                <div class="col col-md-6 col-lg-6">
+                    <div class="about-me-content">
+                        <h4 class="h4">Специалист по речевой коррекции и коммуникации. Логопсихолог.</h2>
+                            
+                            <p>"Грешно думать, что логопедия только для детей. Ведь речь - главный инструмент, он же и оружие."</p>
+                            <strong>Наталья - проводник в мир речевого совершенства</strong>
+                            <p class="default-p">Эксперт в области речевого развития, специалист по психолого-речевой коррекции и коммуникации.</p>
+
+                            <p>Цель - помощь взрослым и подросткам развить уверенность в общении и преодолеть речевые трудности.</p>
+
+                            <p>Где основная задача - не только исправить речевые нарушения, но и развить навыки общения, улучшить социальное взаимодействие и повысить уверенность в себе.</p>
+
+                            <p class="content-p-italic">Мой подход основан на гармоничном сочетании логопедии и психологии, что позволяет создать комфортную атмосферу для обучения и достижения устойчивых результатов.</p>
+
+                            <p class="content-p-italic">Давайте вместе откроем новые горизонты общения!</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="home-link"><a class="home-ref" href="#home-page"><img src="/SpeechOnline/images/arrow-up-thin-thumb.png" alt=""></a></div>
+
+    </section>
+
+    <section id="speech-product" class="service-page">
+        <div class="about-service">
+
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-12 col-md-5"><div class="about-service-title"><h1 class="h1">Speech product</h1></div></div>
+                    <div class="col-12 col-md-7"><div class="about-service-content"><p>С помощью индивидуально подобранных методик работа включает корречцию и развитие речевых навыков, улучшение произношения, артикуляции, дикции, обучение эффективному общению, активному слушанию, умению вести диалог, тренировка навыков публичных выступлений, психологическая поддержка речевых навыков, помощь в преодолении эмоциональных трудностей, психологических барьеров и многое другое</p></div></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="service-items">
+                    <div class="service-item">
+                        <a href="#service-1">
+                        <div class="service-card">
+                            <h4 class="h4">Речевые навыки</h4>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="service-item">
+                        <a href="#service-2">
+                        <div class="service-card-2">
+                            <h4 class="h4">Коммуникативные навыки</h4>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="service-item">
+                        <a href="#service-3">
+                        <div class="service-card-3">
+                            <h4 class="h4">Социальные навыки</h4>
+                        </div>
+                        </a>
+                    </div>
+        </div>
+
+        <div class="home-link"><a class="home-ref" href="#home-page"><img src="/SpeechOnline/images/arrow-up-thin-thumb.png" alt=""></a></div>
+            
+
+    </section>
+
+    <section id="service-1" class="service-1-page">
+
+        <div class="service-1-top-composition">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 col-md-7">
+
+                        <div class="service-1-top-composition-content">
+                            <div class="line"></div>
+                            <h2 class="h2">Речевые навыки</h2>
+                            <p class="accent-p">Работа над артикуляцией:</p>
+                            <p>Упражнения на расслабление тонуса мышц лица, шеи и языка.</p>
+                            <p class="accent-p">Дыхательные практики:</p>
+                            <p>Дыхательные упражнения</p>
+                            <p class="accent-p">Коррекция звукопроизношения:</p>
+                            <p>Работа над правильным произношением звуков, устранение дефектов речи дислалии, ротацизма, сигматизма и т.д.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-4 col-md-5">
+                      <div class="service-1-top-composition-image">
+
+                      </div>
+                  </div>
+                    <div class="col-12 col-sm-8">
+                      <p class="accent-p">Развитие связной речи:</p>
+                      <p>Обучение построению логичных и грамматически правильных фраз, рассказов, повествований.</p>
+                      <p class="accent-p">Улучшение дикции и темпа речи:</p>
+                      <p>Рабта над четкостью произношения, регулированием темпа речи.</p>
+                    </div>
+
+                    
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="service-1-bottom-composition">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-4">
+                        <div class="service-1-bottom-image">
+
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <div class="service-1-bottom-content">
+                            <div class="service-1-bottom-text">
+                            <p class="accent-p">Развитие словарного запаса:</p>
+                            <p>Расширение активного и пассивного словаря, обучение использованию богатого лексикона.</p>
+                            <p class="accent-p">Коррекция нарушений голоса:</p>
+                            <p>Работа с голосом, тембром, силой, высотой.</p>
+                          </div>
+                            <div class="home-link"><a class="home-ref" href="#home-page"><img src="/SpeechOnline/images/arrow-up-thin-thumb.png" alt=""></a></div>
+
+                        </div>
+
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        
+
+
+    </section>
+
+
+    <section id="service-2" class="service-2-page">
+
+        <div class="service-2-top-composition">
+            <div class="container">
+                <div class="row">
+                  <div class="col-4">
+
+                    <div class="service-2-top-composition-image">
+
+                    </div>
+
+                </div>
+                    <div class="col-8">
+
+                        <div class="service-2-top-composition-content">
+                            <div class="line"></div>
+                            <h2 class="h2">Коммуникативные навыки</h2>
+                            <p class="accent-p">Улучшения ораторских навыков:</p>
+                            <p>Развитие умения выступать перед аудиторией, повышение уверенности и выразительности в публичных выступлениях.</p>
+                            <p class="accent-p">Развитие навыков делевой коммуникации:</p>
+                            <p>Обучение эффективному ведению переговоров, деловой переписки и презентации идей в профессиональной среде.</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                            <p class="accent-p">Развитие навыков импровизации:</p>
+                            <p>Обучение быстрому и уверенному реагированию в неожиданных ситуациях, развитие способности к спонтанной и эфеективной речи.</p>
+                            <p class="accent-p">Управление эмоциональным состоянием в речи:</p>
+                            <p>Работа над контролем эмоций во время общения, развитие эмоциональной грамотности и способности выражать чувства через речь.</p>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="service-2-bottom-composition">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="service-2-bottom-content">
+                            <p class="accent-p">Активное слушание и обратная связь:</p>
+                            <p>Обучение техникам активного слушания, развитию эмпатии и навыкам предоставления конструктивной обратной связи.</p>
+                            <p class="accent-p">Эффективное использование невербальных сигналов:</p>
+                            <p>Обучение правильному использованию жестов, мимики и поз для услиления речевого воздейсвия.</p>
+                            <p class="accent-p">Развитие уверенности в общении:</p>
+                            <p>Повышение уверенности и комфорта в разных коммуникативных ситуациях, от личных разговоров до публичных выступлений.</p>
+                            <p class="accent-p">Работа с конфликтными ситуациями:</p>
+                            <p>Обучение техникам разрешения конфликтов и управления сложными коммуникативными ситуациями.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-link"><a class="home-ref" href="#home-page"><img src="/SpeechOnline/images/arrow-up-thin-thumb.png" alt=""></a></div>
+
+
+    </section>
+
+    <section id="service-3" class="service-3-page">
+
+      <div class="service-3-top-composition">
+          <div class="container">
+              <div class="row">
+                  <div class="col-8 col-md-7">
+
+                      <div class="service-3-top-composition-content">
+                          <div class="line"></div>
+                          <h2 class="h2">Социальные навыки</h2>
+                          <p class="accent-p">Речевые консультации:</p>
+                          <p>Обучение методам и приемам работы с имеющимися речевыми и психологическими проблемами, предоставление рекомендаций по развитию речи.</p>
+                          <p class="accent-p">Развитие социальных навыков:</p>
+                          <p>Обучение эффективному взаимодействию с окружающими, развитие навыков работы в группе, повышение уверенности в общении.</p>
+                          </div>
+
+                  </div>
+                  <div class="col-4 col-md-5">
+                    <div class="service-3-top-composition-image">
+
+                    </div>
+                </div>
+                  <div class="col-12 col-sm-8">
+                    <p class="accent-p">Психологическая адаптация к сложным жизненным ситуациям:</p>
+                    <p>Помощь в преодолении стресса и адаптации к изменениям, которые могут влиять на речевую деятельность (например, после травмы или в условиях хронической болезни).</p>
+                    
+                    <p class="accent-p">Речевые тренинги и терапия:</p>
+                    <p>Комплексные программы, включающие упражнения по улучшению речи, совместно с нейропсихологическими методами для преодоления речевых нарушений.</p>
+
+                    <p class="accent-p">Коррекция нарушений речи, связанных с психологическими проблемами:</p>
+                    <p>Работа с расстройствами речи, вызванными эмоциональными и психическими состояниями.</p>
+
+                  </div>
+
+                  
+              </div>
+          </div>
+      </div>
+
+      <div class="service-3-bottom-composition">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-5">
+                      <div class="service-3-bottom-image">
+
+                      </div>
+                  </div>
+
+                  <div class="col-7">
+                      <div class="service-3-bottom-content">
+                          <p class="accent-p">Психологическая поддержка и корреция эмоциональных состояний:</p>
+                          <p>Работа с тревожностью, страхами и низкой самооценкой, которые могут негативно влиять на речевую активность и уверенность в общении.</p>
+                          <p class="accent-p">Преодоление коммуникативных барьеров:</p>
+                          <p>Помощь в преодолении трудностей в общении, устранение барьеров, связанных с застенчивостью, страхом общения или психологическими блоками.</p>
+                          <div class="home-link"><a class="home-ref" href="#home-page"><img src="/SpeechOnline/images/arrow-up-thin-thumb.png" alt=""></a></div>
+
+                        
+                        </div>
+                  </div>
+
+
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="form-call" id="callback">
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><p class="form-call-title">Вы можете оставить заявку на сайте или через социальные сети</p></div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-10 offset-md-1">
+            <form class="callback-form" action="https://formspree" method="POST">
+
+              <input type="text" name="Name" placeholder="Введите Ваше Ф.И.О." required>
+              <input type="text" name="BirthDate" placeholder="Введите Вашу дату рождения" required>
+              <input type="text" name="CallBackData" placeholder="Введите Ваш Email либо номер телефона" required>
+              <textarea rows="10" name="Message" id="message_textarea" placeholder="Опишите свою проблему"></textarea>
+              <div class="form-addition-text">*Если Вы родитель подростка, укажите его/её имя и возраст в скобках</div>
+              <div class="submit-btn"><button type="submit">Отправить</button></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="call-social">
+                    
+          <div class="soc-call">
+                  <div class="link-call email-link"><a href="#"><i class="fa-regular fa-envelope"></i></a></div>
+                  <div class="link-call instagram-link"><a href="#"><i class="fa-brands fa-square-instagram"></i></a></div>
+                  <div class="link-call telegram-link"><a href="#"><i class="fa-brands fa-telegram"></i></a></div>
+          </div>
+
+      </div>
+      </div>
+
+
+
+    </section>
+
+    <section id="faq" class="questions">
+
+      <div class="questions-composition">
+          <h2 class="h2">SPEECH  ONLINE</h2>
+          <p>Часто задаваемые вопросы</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Сколько стоит занятие?</p></summary>
+                  <p class="answer-p">Стоимость занятий и консультаций варьируется в зависимости от направления и запроса. Поэтому общую цену на всех установить невозможно. Уточните цену в <a href="">Directed</a> или <a href="">Telegram</a></p>
+                </details>
+              </div>
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Можно заниматься только с психологом без логопедии?</p></summary>
+                  <p class="answer-p">Конечно можно записаться на консультацию и начать получать психологическую поддержку без речевой практики уже сегодня</p>
+                </details>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Это что логопедия для взрослых?</p></summary>
+                  <p class="answer-p">Это направление логопедии, которое фокусируется на коррекции речевых нарушений и коммуникации взрослых людей. Оно охватывает широкий спектр проблем связанных с речью, которые могут возникать в результате психологических или неврологических проблем, возрастных изменений или профессиональных нагрузок на голос.</p>
+                </details>
+              </div>
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Зачем взрослым логопед если они выговаривают все звуки?</p></summary>
+                  <p class="answer-p">Для коррекции речевых или коммуникативных нарушений, восстановления голосовых функций, улучшения навыков общения после травм или операций, а также для повышения уверенности в себе и качества жизни.</p>
+                </details>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Как понять что мне нужна помощь специалиста?</p></summary>
+                  <p class="answer-p">Если Вы испытываете трудности в произношении, изменении голоса, проблемы в общении или в востановлении речи, наблюдаются социальные или эмоциональные проблемы. Вам стоит обратиться к специалисту.</p>
+                </details>
+              </div>
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Могу ли я улучшить свою речь и психоэмоциональное состояние самостоятельно?</p></summary>
+                  <p class="answer-p">Да, выполняя упражнения и практики используя онлайн ресурсы и приложения. Однако для серьезных нарушений или специфических проблем рекомендуется обратиться к специалисту, что ускорит процесс и обеспечит более эффективные результаты.</p>
+                </details>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <details>
+                  <summary><p class="summary-p">Сколько нужно занятий?</p></summary>
+                  <p class="answer-p">Длительность курса зависит от индивидуальных потребностей и целей так же как частота и количество занятий.</p>
+                </details>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="results" class="reviews inverse" style="background-image: url('https://assets.isu.pub/document-structure/230612045852-f64dc2b8fadd979ff1cc81d90e620cb1/v1/4f724edc55c55c0ae7990ad7c70d064c.jpeg');">
+      <div class="reviews-composition">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+
+            <h2 class="h2 review-h2">Результаты</h2>
+            <div class="col-sm-8 offset-sm-2">
+              <div class="quotes">
+
+                <div class="slider-container">
+                  <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                    <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                        <i class="fas fa-angle-left fa-5x"></i>
+                    </li>
+                    <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+                        <i class="fas fa-angle-right fa-5x"></i>          
+                    </li>
+                  </ul>
+
+                <div class="my-slider">
+                  <div class="slider-item">
+                    <div class="review-header">Оксана</div>
+                    <div class="review-date">29.10.2020 (Наименование услуги)</div>
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review-text">Мне очень повезло! Наконец-то нашла хорошего специалиста по исправлению речевых дефектов в г. Мелитополе. Наталья предоставляет индивидуальный подход к проблеме клиента, на первых этапах помогает выявить причину и природу проблемы, далее подбирает необходимый набор методик кореекции речевых деффектов. На каждом этапе происходит анализ и закрепление результатов. Специалистом осталась довольна!</div>
+                  </div>
+                  
+                  <div class="slider-item">
+                    <div class="review-header">Александра</div>
+                    <div class="review-date">10.11.2020 (Наименование услуги)</div>
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review-text">Четко, быстро, результативно! Рада что обратилась к Наталье за помощью в решении моей небольшой проблемы произношения некоторых звуков. Упражнения были подобраны эффективные. Рекомендую данного специалиста!</div>
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="review-header">Максим</div>
+                    <div class="review-date">10.11.2020 (Наименование услуги)</div>
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review-text">Необходимо было поставить речь для выступления на важном мероприятии. Специалист помогла найти наиболее важные детали в тексте, проработать психологические барьеры выступления перед аудиторией. Результатом остался доволен, выступление получилось успешным!</div>
+                  </div>
+
+                </div>
+
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -2074,6 +2085,8 @@ details {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.11/min/tiny-slider.js"></script>
+
     <script>
 
     $(document).ready(function(){
@@ -2084,6 +2097,48 @@ details {
         console.log(1);
     });
     });
+
+    /*questions*/
+
+    document.querySelectorAll('.questions details').forEach((item) => {
+    item.addEventListener('toggle', (event) => {
+    if (event.target.open) {
+      document.querySelectorAll('.questions details').forEach((otherItem) => {
+          if (otherItem !== event.target) {
+            otherItem.removeAttribute('open');
+          }
+        });
+        }
+      });
+    });
+
+    const slider = tns({
+    container: '.my-slider',
+    loop: true,
+    items: 1,
+    slideBy: 'page',
+    nav: false,    
+    autoplay: true,
+    speed: 400,
+    autoplayTimeout: 12000,
+    autoplayButtonOutput: false,
+    mouseDrag: true,
+    lazyload: true,
+    controlsContainer: "#customize-controls",
+    responsive: {
+        640: {
+            items: 1,
+        },
+        
+        768: {
+            items: 1,
+        }
+    }
+
+  });
+
+ 
+
 
     </script>
 </body>
