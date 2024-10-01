@@ -962,6 +962,77 @@ details {
 }
 
 
+/*Connect page*/
+.connect-section {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: rgb(214, 207, 200);
+}
+.connect-section .container>.row>.col-8 {
+  padding: 0;
+  margin: 0;
+  /*height: 100%;*/
+}
+.connect-composition {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.phone-img {
+  display: flex;
+  height: 470px;
+  width: auto;
+  min-height: 200px;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./images/phone-img-remove-bg.png');
+  background-size: 230px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.flex-connect {
+  display: flex;
+  justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.connect-card {
+ height: 240px;
+ width: 240px;
+ position: relative;
+ top: 20%;
+}
+
+
+.connect-card .h4 {
+  margin-bottom: 20px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: 'Bezier Sans';
+  font-size: 14pt;
+}
+.connect-card a {
+  white-space: nowrap;
+  text-align: center;
+  font-family: 'Bezier Sans';
+  font-size: 14pt;
+}
+
+.qr-link-img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+.qr-link-img img {
+  margin-top: 40px;
+  width: 100%;
+}
+
+
 
 
 
@@ -1534,6 +1605,38 @@ a.menu-link:focus {
 	box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
+
+
+/*Connect*/
+.phone-img {
+  background-size: 130px;
+}
+
+.connect-card {
+  font-size: 10pt;
+ height: 120px;
+ width: 120px;
+ position: relative;
+ top: 30%;
+}
+.connect-card h4 {
+  font-size: 12pt;
+}
+.connect-card p {
+  font-size: 9pt;
+}
+.qr-link-img {
+  width: 90%;
+}
+.qr-link-img img {
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+/*Connect-page*/
+
+
 }
 
 @media (max-width: 576px) {
@@ -2079,6 +2182,46 @@ a.menu-link:focus {
       </div>
       </div>
     </section>
+
+
+    <section id="connect" class="connect-section">
+
+      <div class="connect-composition">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="phone-img">
+  
+              </div>
+            </div>
+            <div class="col-8">
+              
+              <div class="flex-connect">
+  
+                <div class="connect-card">
+                  <h4 class="h4">Telegram</h4>
+                  <a href=""><p>@speech_time</p></a>
+                  <div class="qr-link-img">
+                    <img src="/SpeechOnline/images/qr-telegram.png" alt="">
+                  </div>
+                </div>
+                <div class="connect-card">
+                  <h4 class="h4">Instagram</h4>
+                  <a href=""><p>@speech_time</p></a>
+                  <div class="qr-link-img">
+                    <img src="/SpeechOnline/images/qr-inst.png" alt="">
+                  </div>
+                </div>
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+      </section>
 
 
 
