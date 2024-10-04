@@ -646,7 +646,7 @@ section {
     font-size: 14pt;
 }
 .service-1-page p {
-    font-size: 12pt;
+    font-size: 16pt;
 }
 
 .service-2-page details {
@@ -659,10 +659,10 @@ section {
 
 
 .service-2-page .accent-p {
-    font-size: 14pt;
+    font-size: 16pt;
 }
 .service-2-page p {
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .service-3-page details {
@@ -675,10 +675,10 @@ section {
 
 
 .service-3-page .accent-p {
-    font-size: 14pt;
+    font-size: 16pt;
 }
 .service-3-page p {
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 
@@ -694,7 +694,6 @@ section {
 
 .service-1-bottom-image {
     background-image: url('/SpeechOnline/images/service-1-bottom-image');
-    /*background-image: url('./images/5-top.png');*/
     display: flex;
     width: 100%;
     height: 40vh;
@@ -1065,6 +1064,27 @@ details {
     background-size: 300px;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+
+.flex-connect-links {
+
+font-size: 20pt;
+height: 260px;
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-wrap: nowrap;
+justify-content: space-around;
+
+}
+.flex-connect-links a:link {
+text-decoration: none;
+}
+
+.flex-connect-links a {
+  color: rgba(80, 80, 80, 0.7);
+  text-shadow: 0px 4px 4px gray;
 }
 
 
@@ -1590,6 +1610,7 @@ a.menu-link:focus {
     font-size: 10.5pt;
 }
 .service-2-page .accent-p {
+  font-size: 12pt;
     margin-top: 3px;
 }
 .service-2-top-composition-image {
@@ -1608,7 +1629,7 @@ a.menu-link:focus {
     margin: 0;
     font-family: 'Bezier Sans', sans-serif;
     line-height: 1.25;
-    font-size: 8pt;
+    font-size: 10pt;
     letter-spacing: 1px;
 }
 /*Service page 3*/
@@ -1632,11 +1653,12 @@ a.menu-link:focus {
 .service-3-page p {
     margin-bottom: 0px;
     font-family: 'Bezier Sans', sans-serif;
-    font-size: 7pt;
+    font-size: 10pt;
     line-height: 1.3;
     letter-spacing: 1px;
 }
 .service-3-page .accent-p {
+  font-size: 12pt;
   margin-top: 3px;
 }
 
@@ -2473,8 +2495,10 @@ a.menu-link:focus {
             <div class="row">
               <div class="col-sm-10 offsetsm-2 col-md-4 col-lg-4 col-xl-4">
                 <div class="phone-img">
-                  <div class="phone-img-instagram-text">
-                    <p>Instagram</p>
+                  <div class="flex-connect-links">
+                    <a href="">@speech_time</a>
+  
+                    <a href="">@speech__time</a>
                   </div>
                 </div>
               </div>
@@ -2573,10 +2597,33 @@ if (event.target.open) {
     }
   });
 
-  
-
-
 });
+
+
+document.querySelectorAll('.service-2-page details').forEach((item) => {
+    item.addEventListener('toggle', (event) => {
+    if (event.target.open) {
+      document.querySelectorAll('.service-2-page details').forEach((otherItem) => {
+          if (otherItem !== event.target) {
+            otherItem.removeAttribute('open');
+          }
+        });
+        }
+      });
+    });
+
+    document.querySelectorAll('.service-3-page details').forEach((item) => {
+    item.addEventListener('toggle', (event) => {
+    if (event.target.open) {
+      document.querySelectorAll('.service-3-page details').forEach((otherItem) => {
+          if (otherItem !== event.target) {
+            otherItem.removeAttribute('open');
+          }
+        });
+        }
+      });
+    });
+
     /*questions*/
 
     document.querySelectorAll('.questions details').forEach((item) => {
