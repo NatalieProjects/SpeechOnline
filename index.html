@@ -1074,6 +1074,8 @@ details {
 
 .flex-connect-links {
 
+
+visibility: hidden;
   position: relative;
     font-size: 11pt;
     height: 120px;
@@ -1298,6 +1300,29 @@ summary{
 }
 
 @media (max-width: 768px) {
+
+
+  .flex-connect-links {
+
+position: relative;
+  font-size: 11pt;
+  height: 120px;
+  display: flex;
+  top: -20px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+
+}
+.flex-connect-links a:link {
+text-decoration: none;
+}
+
+.flex-connect-links a {
+color: rgba(80, 80, 80, 0.7);
+text-shadow: 0px 4px 4px gray;
+}
 
 
   .nav li {
@@ -1748,25 +1773,24 @@ a.menu-link:focus {
 }
 
 .questions-composition p {
-    margin-top: 20px;
-    font-family: 'Bezier Sans', sans-serif;
-    letter-spacing: 1px;
-  font-size: 9pt;
-  padding: 0;
-  margin: 8px 4px 2px 4px;
-  text-align: left;
+  font-family: 'Bezier Sans', sans-serif;
+        letter-spacing: 1px;
+        font-size: 8pt;
+        padding: 0;
+        margin: 4px 4px 2px 4px;
+        text-align: left;
 }
 
 .questions-composition .summary-p {
   font-weight: bold;
-  text-transform: uppercase;
-    margin-top: 20px;
-    font-family: 'Bezier Sans', sans-serif;
-    letter-spacing: 1px;
-  font-size: 8pt;
-  padding: 4px 0 0 0;
-  margin: 0;
-  text-align: center;
+        text-transform: uppercase;
+        margin-top: 20px;
+        font-family: 'Bezier Sans', sans-serif;
+        letter-spacing: 2px;
+        font-size: 7pt;
+        padding: 0px 0 0 0;
+        margin: 0;
+        text-align: center;
 }
 
 
