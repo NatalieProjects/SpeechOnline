@@ -1,0 +1,4 @@
+User agent: *
+
+Allow: https://natalieprojects.github.io/SpeechOnline/
+Disallow: https://natalieprojects.github.io/SpeechOnline/images/
