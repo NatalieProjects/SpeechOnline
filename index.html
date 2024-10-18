@@ -996,6 +996,9 @@ details {
 
 
 /*Review page*/
+
+
+
 .reviews {
     padding: 60px 40px;
    /* background-image: url('https://assets.isu.pub/document-structure/221115091017-c4fc3b30b5ae79f1dd4f8880c913f9f8/v1/509b99bcedbb9d18211aff40a5631dd4.jpeg');*/
@@ -1008,7 +1011,7 @@ details {
 .reviews-composition {
     font-family: 'Bezier Sans';
     background-color: rgba(222, 184, 135, 0.8); 
-    padding: 20px;
+    padding: 20px 4px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1031,19 +1034,64 @@ details {
   letter-spacing: 1px;;
 }
 
-.controls {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-    left: 0;    
-    width: 100%;    
-    top: 50%;
-    transform: translatey(-50%);
-    display: flex;
-    align-items: center;    
-    justify-content: space-between;
-    display: none;
+
+
+
+.control {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.control li {
+  position: relative;
+  z-index: 99;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
+.control li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.control li.prev {
+
+  float: left;
+  left: -12px;
+    top: 32px;
+    width: 10px;
+    background: none;
+}
+.control li.next {
+
+  float: right;
+  right: 0px;
+    top: 32px;
+    width: 10px;
+    background: none;
+}
+.tns-nav {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.tns-nav button {
+  height: 13px;
+  width: 8px;
+  background-color: #a5a5a5;
+  border: none;
+  margin-left: 7px;
+  border-radius: 50%;
+}
+.tns-nav .tns-nav-active {
+  background-color: black;
+}
+/* .scale{
+  animation-name: scale;
+  transform-origin: center
 }
 
 
@@ -1184,6 +1232,16 @@ summary{
   font-size: 8pt;
 }
 
+
+.review-stars .fa-star
+{ 
+  transform: scale(0.65, 0.65); 
+  margin-left: -5px;
+}
+
+.reviews .fa-heart{
+  color:rgba(0, 0, 0, 0.3);
+}
 
 
 
@@ -1749,6 +1807,16 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
 
 
 /*Reviews page*/
+
+
+.review-stars .fa-star
+{ 
+  transform: scale(0.5, 0.5); 
+  margin-left: -4px;
+}
+.reviews .fa-heart {
+
+}
 .reviews {
     padding: 15px 30px;
 }
@@ -2475,15 +2543,15 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
               <div class="quotes">
 
                 <div class="slider-container">
-                  <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
-                    <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
-                        <i class="fas fa-angle-left fa-5x"></i>
+
+                  <ul class="control" id="custom-control">
+                    <li class="prev">
+                      <i class="fas fa-angle-left fa-2x"></i>
                     </li>
-                    <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
-                        <i class="fas fa-angle-right fa-5x"></i>          
+                    <li class="next">
+                      <i class="fas fa-angle-right fa-2x"></i>
                     </li>
                   </ul>
-
                 <div class="my-slider">
                   <div class="slider-item">
                     <div class="review-header">Елена, 28 лет</div>
@@ -2566,6 +2634,52 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <div class="review-text">"Я долго мучилась с заиканием, и это сильно мне мешало общаться с друзьями и в школе. Моя логопед Наталья Сергеевна помогла мне понять, как правильно дышать и говорить. Занятия были интересными, непринужденными и не детскими. Теперь я чувсвую себя увереннее и могу свободнее разговоривать."</div>
+                  </div>
+
+
+                  <div class="slider-item">
+                    <div class="review-header">Даниил, 17 лет</div>
+                    
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review-text">"После травмы у меня появились проблемы с речью, и я не знал, как с этим справиться. Родители решили обратиться за помощью к логопеду и я думал, что это для детей и я буду сидеть на занятии с разукрашкой и мне не хотелось. Занятия оказались онлайн, очень интересными и продуктивными. Наталья умеет расположить к себе и найти подход. Она помогла мне восстановить речь и научила справляться с волнением. Она всегда была на связи, когда мне было трудно, и я очень ценю её помощь!"</div>
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="review-header">Мария, 50 лет</div>
+                    
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review-text">"Мне всегда было сложно произносить некоторые звуки, что создавалось неудобства в общении. Для новой должности мне нежно  было это исправить. Я решила обратиться к логопеду и мне повезло встретить Натали <i class="fa fa-heart" aria-hidden="true"></i> Она оказалась замечательным специалистом!! Она создала комфортную атмосферу и подобрала упражнения, которые действительно помогли, а я всегда думала, что это для детей. Сейчас я чувствую себя гораздо увереннее и свободнее в разговоре."</div>
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="review-header">Анна, 30 </div>
+                    
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review-text">"Я Анна, и в свои 30 лет я обратилась к Наталье из-за проблем с речью и внутренними комплексами, которые мешали мне общаться. Занятия были не только эффективными, но и очень поддерживающими. Натали помогла мне не только улучшить дикцию, но и справиться с волнением. Теперь я чувствую себя увереннее и могу свободно выражать свои мысли!"</div>
+                  </div>
+
+		<div class="slider-item">
+                    <div class="review-header">Наталья, 25 лет</div>
+                    
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review-text">"В детстве у меня было заикание, и я решила обратиться к специалисту, чтобы преодолеть этот барьер во взрослом возрасте. Наталья оказалась настоящим находкой! Она не только помогла мне улучшить речь, но и научила справляться с внутренними страхами. Теперь я спокойно общаюсь с людьми и даже выступаю на публике применяя в жизни её упражнения, когда чувствую страх или волнение."</div>
+                  </div>
+
+		<div class="slider-item">
+                    <div class="review-header">Марина, 48 лет </div>
+                    
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review-text">"Я долго боролась с внутренними барьерами, которые мешали мне свободно говорить в кругу друзей и коллег. Мне пришлось сменить место жительство и работу, где никак нельзя было отмалчиваться. И я наткнулась на чудо! Наташа помогла мне не только улучшить речевые навыки, но и разобраться в моих чувствах. Её подход был очень тактичным и поддерживающим. Я чувствую, что стала более открытой и уверенной! Спасибо <i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i> " </div>
                   </div>
 
                 </div>
@@ -2742,24 +2856,35 @@ document.querySelectorAll('.service-2-page details').forEach((item) => {
     items: 1,
     slideBy: 'page',
     nav: false,    
-    autoplay: true,
+    autoplay: false,
     speed: 400,
     autoplayTimeout: 12000,
     autoplayButtonOutput: false,
     mouseDrag: true,
     lazyload: true,
-    controlsContainer: "#customize-controls",
-    responsive: {
-        640: {
-            items: 1,
-        },
-        
-        768: {
-            items: 1,
-        }
+    ccontrolsPosition: "bottom",
+  navPosition: "bottom",
+  mouseDrag: true,
+  autoplay: true,
+  autoplayButtonOutput: false,
+  controlsContainer: "#custom-control",
+  responsive: {
+    0: {
+      items: 1,
+      nav: false
+    },
+    768: {
+      items: 1,
+      nav: false
+    },
+    1440: {
+      items: 1
     }
 
-  });
+
+  }
+
+});
 
  
 
