@@ -1430,7 +1430,7 @@ a.menu-link:focus {
     .about-service-content {
       font-style: italic;
       font-size: 12pt;
-      margin-top: 0px;
+      margin-top: 40px;
     }
 
     /*Speech product*/
@@ -1446,6 +1446,7 @@ a.menu-link:focus {
 }
 
 .service-items {
+    padding-top: 60px;
     background-color: rgb(214, 207, 200);
     height: 20vh;
     width: 100%;
@@ -1534,6 +1535,8 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
 
 .service-page {
   background-color: rgb(214, 207, 200);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .about-service {
@@ -1807,7 +1810,15 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
 
 
 /*Reviews page*/
-
+.reviews-composition .row>* {
+    margin-left: -20px;
+    flex-shrink: 0;
+    width: 110%;
+    max-width: 110%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-top: var(--bs-gutter-y);
+}
 
 .review-stars .fa-star
 { 
@@ -1954,8 +1965,8 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
             <ul class="nav">
                 <li class="menu-item"><a class="menu-link" href="#about-me"></a></li>
                 <li class="menu-item"><a class="menu-link" href="#speech-product">Speech product</a></li>
-                <li class="menu-item"><a class="menu-link" href="#callback">Записаться на занятие</a></li>
-                <li class="menu-item"><a class="menu-link" href="#faq">Частые вопросы</a></li>
+                <li class="menu-item"><a class="menu-link" href="#callback">Запись</a></li>
+                <li class="menu-item"><a class="menu-link" href="#faq">Вопросы</a></li>
                 <li class="menu-item"><a class="menu-link" href="#results">Результаты</a></li>
                 <li class="menu-item"><a class="menu-link" href="#connect">Speech connect</a></li>
 
@@ -2037,7 +2048,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
                             
                             <p>"Грешно думать, что логопедия только для детей. Ведь речь - главный инструмент, он же и оружие."</p>
                             <strong>Наталья - проводник в мир речевого совершенства</strong>
-                            <p class="default-p">Эксперт в области речевого развития, специалист по психолого-речевой коррекции и коммуникации.</p>
+                            <p class="default-p">Специалист по психолого-речевой коррекции и коммуникации.</p>
 
                             <p>Цель - помощь взрослым и подросткам развить уверенность в общении и преодолеть речевые трудности.</p>
 
@@ -2064,7 +2075,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
 
                   
                     <div class="col-12 col-md-5"><div class="about-service-title"><h1 class="h1">Speech product</h1></div></div>
-                    <div class="d-none d-md-block col-7"><div class="about-service-content"><p>С помощью индивидуально подобранных методик работа включает корречцию и развитие речевых навыков, улучшение произношения, артикуляции, дикции, обучение эффективному общению, активному слушанию, умению вести диалог, тренировка навыков публичных выступлений, психологическая поддержка речевых навыков, помощь в преодолении эмоциональных трудностей, психологических барьеров и многое другое</p></div></div>
+                    <div class="d-none d-md-block col-7"><div class="about-service-content"><p>С помощью индивидуально подобранных методик работа включает корречцию и развитие речевых навыков, улучшение произношения, обучение активному слушанию, тренировка навыков публичных выступлений, психологическая поддержка речевых навыков, помощь в преодолении эмоциональных трудностей, психологических барьеров и многое другое.</p></div></div>
                 </div>
             </div>
         </div>
@@ -2105,7 +2116,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
           <div class="row">
             <div class="d-block d-sm-none col-12">
 
-              <div class="about-service-content"><p>С помощью индивидуально подобранных методик работа включает корречцию и развитие речевых навыков, улучшение произношения, артикуляции, дикции, обучение эффективному общению, активному слушанию, умению вести диалог, тренировка навыков публичных выступлений, психологическая поддержка речевых навыков, помощь в преодолении эмоциональных трудностей, психологических барьеров и многое другое</p></div>
+              <div class="about-service-content"><p>С помощью индивидуально подобранных методик работа включает корречцию и развитие речевых навыков, улучшение произношения, обучение активному слушанию, умению вести диалог, тренировка навыков публичных выступлений, психологическая поддержка речевых навыков, помощь в преодолении эмоциональных трудностей, психологических барьеров и многое другое.</p></div>
               
             </div>
           </div>
@@ -2438,7 +2449,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
             <div class="row">
               <div class="col-12 col-sm-6">
                 <details>
-                  <summary><p class="summary-p">Это что логопедия для взрослых?</p></summary>
+                  <summary><p class="summary-p">Что это?</p></summary>
                   <p class="answer-p">Это направление логопедии, корректирующее нарушения речи и коммуникации, возникающие из-за психологических и неврологических проблем, возрастных изменений и профессиональных нагрузок на голос.</p>
                 </details>
               </div>
@@ -2474,7 +2485,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
                 <div class="col-12 col-sm-6">
                 <details>
                   <summary><p class="summary-p">Сколько стоит занятие?</p></summary>
-                  <p class="answer-p">Стоимость занятий варьируется от направления и запроса. Для уточнения цен обращайтесь в <a href="https://www.instagram.com/speech__time">Instagram</a> или <a href="https://t.me/speech_time">Telegram</a></p>
+                  <p class="answer-p">Стоимость занятий зависит от направления и запроса. Для уточнения цен обращайтесь в <a href="https://www.instagram.com/speech__time">Instagram</a> или <a href="https://t.me/speech_time">Telegram</a></p>
                 </details>
               </div>
               <div class="col-12 col-sm-6">
@@ -2517,7 +2528,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
               <div class="col-12 col-sm-6">
                 <details>
                   <summary><p class="summary-p">Могу ли я улучшить свою речь и психоэмоциональное состояние самостоятельно?</p></summary>
-                  <p class="answer-p">Да, кднако для серьезных нарушений или специфических проблем рекомендуется обратиться к специалисту.</p>
+                  <p class="answer-p">Да, однако для серьезных нарушений или специфических проблем рекомендуется обратиться к специалисту.</p>
                 </details>
               </div>
 
@@ -2586,7 +2597,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
                     <div class="review-stars">
                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <div class="review-text">"После травмы у меня возникли сложности с речью и общением. Наталья провела мне комплексную работу, помогая мне как с восстановлением речи, так и с психоэмоциональным состоянием. Её подход был очень индивидуальным и чутким. Я остаюсь благодарным за поддержку и профессионализм."</div>
+                    <div class="review-text">"После травмы у меня возникли сложности с речью и общением. Наталья провела комплексную работу, помогая мне как с восстановлением речи, так и с психоэмоциональным состоянием. Её подход был очень индивидуальным и чутким. Я остаюсь благодарным за поддержку и профессионализм."</div>
                   </div>
 
 
@@ -2652,7 +2663,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
                     <div class="review-stars">
                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <div class="review-text">"Мне всегда было сложно произносить некоторые звуки, что создавалось неудобства в общении. Для новой должности мне нежно  было это исправить. Я решила обратиться к логопеду и мне повезло встретить Натали <i class="fa fa-heart" aria-hidden="true"></i> Она оказалась замечательным специалистом!! Она создала комфортную атмосферу и подобрала упражнения, которые действительно помогли, а я всегда думала, что это для детей. Сейчас я чувствую себя гораздо увереннее и свободнее в разговоре."</div>
+                    <div class="review-text">"Мне всегда было сложно произносить некоторые звуки, что создавало неудобства в общении. Для новой должности мне нужно было это исправить. Я решила обратиться к логопеду и мне повезло встретить Натали <i class="fa fa-heart" aria-hidden="true"></i> Она оказалась замечательным специалистом!! Она создала комфортную атмосферу и подобрала упражнения, которые действительно помогли, а я всегда думала, что это для детей. Сейчас я чувствую себя гораздо увереннее и свободнее в разговоре."</div>
                   </div>
 
                   <div class="slider-item">
@@ -2670,7 +2681,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
                     <div class="review-stars">
                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <div class="review-text">"В детстве у меня было заикание, и я решила обратиться к специалисту, чтобы преодолеть этот барьер во взрослом возрасте. Наталья оказалась настоящим находкой! Она не только помогла мне улучшить речь, но и научила справляться с внутренними страхами. Теперь я спокойно общаюсь с людьми и даже выступаю на публике применяя в жизни её упражнения, когда чувствую страх или волнение."</div>
+                    <div class="review-text">"В детстве у меня было заикание, и я решила обратиться к специалисту, чтобы преодолеть этот барьер во взрослом возрасте. Наталья оказалась настоящей находкой! Она не только помогла мне улучшить речь, но и научила справляться с внутренними страхами. Теперь я спокойно общаюсь с людьми и даже выступаю на публике применяя в жизни её упражнения, когда чувствую страх или волнение."</div>
                   </div>
 
 		<div class="slider-item">
@@ -2679,7 +2690,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
                     <div class="review-stars">
                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <div class="review-text">"Я долго боролась с внутренними барьерами, которые мешали мне свободно говорить в кругу друзей и коллег. Мне пришлось сменить место жительство и работу, где никак нельзя было отмалчиваться. И я наткнулась на чудо! Наташа помогла мне не только улучшить речевые навыки, но и разобраться в моих чувствах. Её подход был очень тактичным и поддерживающим. Я чувствую, что стала более открытой и уверенной! Спасибо <i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i> " </div>
+                    <div class="review-text">"Я долго боролась с внутренними барьерами, которые мешали мне свободно говорить в кругу друзей и коллег. Мне пришлось сменить место жительства и работу, где никак нельзя было отмалчиваться. И я наткнулась на чудо! Наташа помогла мне не только улучшить речевые навыки, но и разобраться в моих чувствах. Её подход был очень тактичным и поддерживающим. Я чувствую, что стала более открытой и уверенной! Спасибо <i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i> " </div>
                   </div>
 
                 </div>
