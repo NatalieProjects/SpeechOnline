@@ -1005,20 +1005,21 @@ section {
 }
 
 .questions-composition .h4-answers {
+  font-family: 'Bezier Sans';
     text-transform: uppercase;
     font-size: 18pt;
     letter-spacing: 1px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 40px;
-    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-top: 15px;
 }
 
 .questions-composition p {
     margin-top: 20px;
     font-family: 'Bezier Sans', sans-serif;
     letter-spacing: 1px;
-  font-size: 14pt;
+  font-size: 12pt;
   padding: 0;
   margin: 0;
   margin: 10px 4px;
@@ -1568,12 +1569,12 @@ a.menu-link:focus {
 }
 
 .about-me-content p {
-    font-size: 8.5pt;
+    font-size: 8.3pt;
     text-transform: uppercase;
     font-family: 'Bezier Sans', sans-serif;
     margin-top: 10px;
     letter-spacing: 2px;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 .about-me-content .default-p {
     text-transform: uppercase;
@@ -2135,6 +2136,68 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
 }
 
 
+/*Preloader*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgb(40,40,40);
+}
+.preloader .pulse {
+  position: relative;
+  left: 50%;
+  top: 50vh;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+
+.preloader .pulse::before, .preloader .pulse::after {
+  content: '';
+  border: 6px solid rgb(70,70,70);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+}
+.preloader .pulse::before {
+  animation: pulse-outer 0.8s ease-in infinite;
+}
+.preloader .pulse::after {
+  animation: pulse-inner 0.8s linear infinite;
+}
+@keyframes pulse-outer  {
+  0% {opacity: 1;}
+  25% {opacity: 0.8;}
+  50% {opacity: 0.4;}
+  75% {opacity: 0.1;}
+  100% {opacity: 0;}
+}
+
+@keyframes pulse-inner  {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close-menu {
+  position: absolute;
+  height: 100vh;
+  width: 75px;
+  
+  z-index: 100;
+  top: 0;
+  right: -75px;
+}
+
+
 
 
 
@@ -2143,7 +2206,10 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
 
     <title>Document</title>
 </head>
-<body>
+  <div class="preloader">
+    <div class="pulse">
+    </div>
+  </div>
 
     <header id="home-page" class="site-header">
       <div class="with-blur">
@@ -2160,6 +2226,10 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
                 <li class="menu-item"><a class="menu-link" href="#connect">Speech connect</a></li>
 
             </ul>
+        </div>
+
+        
+        <div class="close-menu">
         </div>
 
         
@@ -2976,11 +3046,27 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
 
     $(document).ready(function(){
     $("#menu-hamburger").click(function(){
-
         $("#main-menu").toggleClass("active");
         $(this).toggleClass("is-active");
         console.log(1);
     });
+
+    $("#main-menu").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор блока с атрибута href
+        var id  = $(this).attr('href'),
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1000 мс
+        $('body,html').animate({scrollTop: top}, 1000, 'swing');
+    });
+
+    $(".close-menu").click(function(){
+      $("#main-menu").removeClass("active");
+      $("#menu-hamburger").removeClass("is-active");
+    });
+
     });
 
 
@@ -3084,6 +3170,14 @@ document.querySelectorAll('.service-2-page details').forEach((item) => {
   }
 
 });
+
+
+$(window).on('load', function() {
+  $('.preloader').delay(1000).fadeOut('slow');
+});
+
+
+
 
  
 
