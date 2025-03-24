@@ -1107,6 +1107,20 @@
       display: flex;
       justify-content: flex-end;
     }
+    .submit-btn {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .submit-btn p {
+      text-align: right;
+      font-size: 8pt;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .submit-btn a {
+      text-decoration: underline;
+    }
 
 
 
@@ -2433,7 +2447,7 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
       }
 
       .callback-form button {
-        margin-top: 10px;
+        /*margin-top: 10px;*/
         height: 36px;
         width: 120px;
         font-family: 'Bezier Sans';
@@ -3266,7 +3280,10 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
             <input type="text" name="CallBackData" placeholder="Введите Ваш Email либо номер телефона" required>
             <textarea rows="10" name="Message" id="message_textarea" placeholder="Опишите свою проблему"></textarea>
             <div class="form-addition-text">*Если Вы родитель подростка, укажите его/её имя и возраст в скобках</div>
-            <div class="submit-btn"><button type="submit">Отправить</button></div>
+            <div class="submit-btn">
+              <p>Нажимая кнопку "ОТПРАВИТЬ", я подтверждаю, что ознакомился(ась) с <a href="/SpeechOnline/conf-politics.html">Политикой конфиденциальности</a> и даю согласие на обработку моих персональных данных.</p>
+              <button type="submit">Отправить</button>
+            </div>
           </form>
         </div>
       </div>
