@@ -167,8 +167,9 @@
 
     a.menu-link:link {
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       color: rgba(255, 255, 255, 0.8);
+      padding-left: 34px;
     }
 
     a.menu-link:visited {
@@ -1082,6 +1083,7 @@
     }
 
     .callback-form button {
+      margin-top: 32px;
       display: inline-block;
       box-sizing: border-box;
       padding: 0px 15px;
@@ -1107,12 +1109,14 @@
       display: flex;
       justify-content: flex-end;
     }
+
     .submit-btn {
       margin-top: 10px;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
     }
+
     .submit-btn p {
       text-align: right;
       font-size: 6pt;
@@ -1121,6 +1125,7 @@
       margin-top: 10px;
       margin-bottom: 0;
     }
+
     .submit-btn a {
       text-decoration: underline;
     }
@@ -1786,6 +1791,7 @@
 
       a.menu-link:link {
         color: rgba(255, 255, 255, 0.8);
+        justify-content: flex-end;
       }
 
       a.menu-link:visited {
@@ -3285,8 +3291,10 @@ background-image: url('https://assets.isu.pub/document-structure/221115091017-c4
             <div class="form-addition-text">*Если Вы родитель подростка, укажите его/её имя и возраст в скобках</div>
             <div class="submit-btn">
               <button type="submit">Отправить</button>
-              <p>Нажимая кнопку "ОТПРАВИТЬ", я подтверждаю, что ознакомился(ась) с <a href="/SpeechOnline/conf-politics.html">Политикой конфиденциальности</a> и даю согласие на обработку моих персональных данных.</p>
-              
+              <p>Нажимая кнопку "ОТПРАВИТЬ", я подтверждаю, что ознакомился(ась) с <a
+                  href="/SpeechOnline/conf-politics.html">Политикой конфиденциальности</a> и даю согласие на обработку
+                моих персональных данных.</p>
+
             </div>
           </form>
         </div>
